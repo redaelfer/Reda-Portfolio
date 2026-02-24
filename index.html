@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Reda El Ferrasi | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
@@ -15,44 +15,27 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
+          <li><a href="#projects">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <section id="profile">
       <div class="section__pic-container">
-        <img style="border-radius: 500px;" src="./assets/profilepic.jpeg" alt="Reda profile picture" />
+        <img src="./assets/profilepic.jpeg" alt="Reda El Ferrasi profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Reda El Ferrasi</h1>
-        <p class="section__text__p2">2nd-year Data Science & IoT Engineering Student</p>
+        <p class="section__text__p2">Final Year Data Science & IoT Engineering Student</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Reda_ElFerrasi_CV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
+          <button class="btn btn-color-2" onclick="window.open('./cv_redaelferrasi.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/reda-el-ferrasi-747a6026a/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/redaelfer'"
-          />
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com/in/reda-elferrasi'"/>
+          <img src="./assets/github.png" alt="Github" class="icon" onclick="location.href='https://github.com/redaelfer'"/>
         </div>
       </div>
     </section>
@@ -64,169 +47,149 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <i class="fa-solid fa-graduation-cap fa-xl"></i>
-              <h3>Education</h3>
-              <p>
-                Classes préparatoires aux grandes écoles<br />
-                Data Science & IoT Engineering, ENSIAS (2nd year)
-              </p>
+              <i class="fa-solid fa-briefcase fa-xl"></i>
+              <h3>Experience</h3>
+              <p>Data Engineer Intern @ ONCF<br />Full-stack Dev Intern @ S4U</p>
             </div>
             <div class="details-container">
-              <i class="fa-solid fa-address-card fa-xl"></i>
-              <h3>Profile</h3>
-              <p>
-                I’m a 2nd-year engineering student at ENSIAS specializing in Data Science, IoT and Web/Mobile development. 
-                I have built full-stack applications using Flask, React, and containerized ML models with Docker. 
-                I’m passionate about turning sensor data into insights, and I’m eager to apply my skills in a professional environment.
-              </p>
+              <i class="fa-solid fa-graduation-cap fa-xl"></i>
+              <h3>Education</h3>
+              <p>ENSIAS - Engineering Degree<br />CPGE - TSI (Technology & Industrial Sciences)</p>
             </div>
+          </div>
+          <div class="text-container">
+            <p class="highlight-text">
+                Currently a final-year Engineering Student at ENSIAS specializing in Data Science and IoT. 
+                I am deeply passionate about building data-driven solutions that bridge the gap between Big Data engineering 
+                and high-performance Full-stack development. My expertise lies in automating complex pipelines and 
+                deploying scalable AI architectures.
+            </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#skills'"
-      />
     </section>
 
     <section id="skills">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
+      <h1 class="title">Technical Skills</h1>
       <div class="skills-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="skills-sub-title"><i class="fa-brands fa-html5"></i>Frontend</h2>
+            <h2 class="skills-sub-title">Data Science & AI</h2>
             <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>HTML</h3><p>Experienced</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>CSS</h3><p>Experienced</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>JavaScript</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>React</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>Tailwind CSS</h3><p>Basic</p></div>
-              </article>
+              <article><div><h3>Python</h3><p>Advanced</p></div></article>
+              <article><div><h3>TensorFlow</h3><p>Intermediate</p></div></article>
+              <article><div><h3>NLP (BERT)</h3><p>Intermediate</p></div></article>
+              <article><div><h3>XGBoost</h3><p>Intermediate</p></div></article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="skills-sub-title"><i class="fa-solid fa-code"></i>Backend & ML</h2>
+            <h2 class="skills-sub-title">Web Development</h2>
             <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>Python</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>Flask</h3><p>Intermediate</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>MySQL</h3><p>Experienced</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>TensorFlow</h3><p>Basic</p></div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="icon" class="icon" />
-                <div><h3>scikit-learn</h3><p>Basic</p></div>
-              </article>
+              <article><div><h3>React</h3><p>Advanced</p></div></article>
+              <article><div><h3>Spring Boot</h3><p>Advanced</p></div></article>
+              <article><div><h3>Node.js</h3><p>Intermediate</p></div></article>
+              <article><div><h3>REST APIs</h3><p>Advanced</p></div></article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="skills-sub-title">Big Data & Ops</h2>
+            <div class="article-container">
+              <article><div><h3>Spark/Kafka</h3><p>Intermediate</p></div></article>
+              <article><div><h3>Docker/K8s</h3><p>Intermediate</p></div></article>
+              <article><div><h3>ELK Stack</h3><p>Intermediate</p></div></article>
+              <article><div><h3>MongoDB/SQL</h3><p>Advanced</p></div></article>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
     </section>
 
-     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="projects2" >
+    <section id="projects">
+      <p class="section__text__p1">Detailed Professional</p>
+      <h1 class="title">Experience & Projects</h1>
+      <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="project-sub-title project-title">End-of-year project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/redaelfer/pfa', '_blank')"                
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://redaelfer.github.io/demo_pfa/', '_blank')"                
-              >
-                Demo
-              </button>
-            </div>
+            <h2 class="experience-sub-title">Data Engineer (Intern) | ONCF</h2>
+            <p class="experience-date">Rabat, 2025</p>
+            <ul class="experience-list">
+              <li>Automated ETL pipeline reducing latency by 40%.</li>
+              <li>ELK Dashboards for 20+ critical KPIs.</li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">TalentAI (Smart Recruitment)</h2>
+            <p class="experience-date">GitHub Project</p>
+            <ul class="experience-list">
+              <li>Semantic matching engine using BERT for CV parsing.</li>
+              <li>Full-stack architecture with Spring Boot & React.</li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">APT Attack Detection</h2>
+            <p class="experience-date">GitHub Project</p>
+            <ul class="experience-list">
+              <li>End-to-end ML pipeline for massive log cleaning.</li>
+              <li>Real-time security alerting with XGBoost & Docker.</li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Agent Fleet Management</h2>
+            <p class="experience-date">GitHub Project</p>
+            <ul class="experience-list">
+              <li>Automated Hetzner server provisioning for AI agents.</li>
+              <li>Tailscale mesh VPN & SSH2 command execution.</li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Full-stack Dev (Intern) | S4U</h2>
+            <p class="experience-date">Rabat, 2024</p>
+            <ul class="experience-list">
+              <li>SaaS ticket management (React/Node.js/MongoDB).</li>
+              <li>83% unit test coverage and 30% admin delay reduction.</li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">RetinaScan (Medical AI)</h2>
+            <p class="experience-date">Github Project</p>
+            <ul class="experience-list">
+              <li>CNN model for automated retinal pathology detection.</li>
+              <li>Optimized with MobileNet V2 for high sensitivity.</li>
+            </ul>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./index.html#contact'"
-      />
     </section>
-
 
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon" />
-          <p><a href="mailto:redaelferrasi@gmail.com">redaelferrasi@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/phone.jpg" alt="Phone icon" class="icon contact-icon" />
-          <p>+212 6 07 42 04 30</p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://www.linkedin.com/in/reda-el-ferrasi-747a6026a/">LinkedIn</a></p>
-        </div>
+      <div class="contact-wrapper">
+          <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+              <i class="fa-solid fa-envelope"></i>
+              <p><a href="mailto:redaelferrasi@gmail.com">redaelferrasi@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+              <i class="fa-solid fa-phone"></i>
+              <p>+212 607 420 430</p>
+            </div>
+            <div class="contact-info-container">
+              <i class="fa-brands fa-linkedin"></i>
+              <p><a href="https://linkedin.com/in/reda-elferrasi">LinkedIn</a></p>
+            </div>
+          </div>
       </div>
     </section>
 
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 Reda El Ferrasi. All Rights Reserved.</p>
+  <p>Copyright &#169; <span id="year"></span> Reda El Ferrasi. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
