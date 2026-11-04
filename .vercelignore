@@ -5,7 +5,8 @@ node_modules/
 dist/
 .vercel/
 assets/
-cv/
+# Exclude editable sources while keeping the PDFs in public/cv/.
+**/*.tex
 docs/
 research/
 output/
