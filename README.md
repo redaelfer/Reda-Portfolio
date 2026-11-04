@@ -3,7 +3,7 @@
 [![Reda El Ferrasi — From data to useful intelligence](public/social-card.png)](https://reda-elferrasi.vercel.app/)
 
 <p align="center">
-  <strong>AI · Machine Learning · Data Science</strong><br/>
+  <strong>AI Engineering · Multi-Agent Systems · Machine Learning · Data Science</strong><br/>
   Full-stack engineering to turn ideas into applications.
 </p>
 
@@ -18,15 +18,25 @@
 
 Explore my projects, interactive architecture walkthroughs, experience, and English/French CVs on **[reda-elferrasi.vercel.app](https://reda-elferrasi.vercel.app/)**.
 
-## Built with
+## My expertise
 
-![React, TypeScript, Vite, CSS, Vercel, Vitest, and Git](https://skillicons.dev/icons?i=react,ts,vite,css,vercel,vitest,git&theme=light&perline=7)
+I am a state-qualified engineer in Data Science and IoT from ENSIAS. My work spans multi-agent systems, LLM integration, machine learning, data engineering, and full-stack applications.
 
-**React · TypeScript · Vite · CSS · Vercel · Vitest · Git**
+### Multi-agent systems & LLM integration
 
-Radix UI powers accessible dialogs, Lucide provides icons, and Vercel Web Analytics tracks visits. The interface includes project search and filters, English/French switching, responsive layouts, and reduced-motion support.
+![OpenClaw](https://img.shields.io/badge/OpenClaw-184F3B?style=flat-square)
+![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-36546B?style=flat-square)
+![Multi-agent orchestration](https://img.shields.io/badge/Multi--agent_orchestration-184F3B?style=flat-square)
 
-## Tools I work with
+During my final-year project at **Matious Digital (January–September 2026)**, I developed and tested an orchestration platform with **20–40 concurrent AI agents**.
+
+- Integrated **OpenClaw and Hermes Agent** through **WebSocket and REST APIs**.
+- Automated **prompt generation, model selection, routing, and error recovery**.
+- Deployed **containerized agents on Hetzner Cloud**.
+
+My LLM integration projects also use **Spring AI, Ollama, and tool calling**. These capabilities are documented in my [AI engineering CV](public/cv/cv-redaelferrasi-AI-ENG.pdf) and the project case studies below.
+
+## My engineering toolkit
 
 These technologies come from the projects and experience featured in the portfolio.
 
@@ -37,9 +47,10 @@ These technologies come from the projects and experience featured in the portfol
 | **Full-stack development** | ![Java, Spring, Next.js, and Node.js](https://skillicons.dev/icons?i=java,spring,nextjs,nodejs&theme=light&perline=4)<br/>React · Next.js · TypeScript · Java · Spring Boot · Flask · Node.js · REST APIs · WebSocket |
 
 ```mermaid
-flowchart TB
-    Focus["AI / ML & Data Science"]
-    Focus --> Models["Models & agents<br/>TensorFlow · scikit-learn<br/>XGBoost · Ollama · Spring AI"]
+flowchart LR
+    Focus["AI Engineering<br/>ML & Data Science"]
+    Focus --> Agents["Multi-agent systems & LLMs<br/>OpenClaw · Hermes Agent<br/>Ollama · Spring AI · Tool calling"]
+    Focus --> Models["Machine learning<br/>TensorFlow · scikit-learn<br/>XGBoost"]
     Focus --> Data["Data pipelines<br/>Kafka · PySpark · HDFS<br/>SQL · Pandas · NumPy"]
     Focus --> Apps["Applications<br/>React · Next.js · Spring Boot<br/>Flask · Node.js"]
 
@@ -60,7 +71,15 @@ flowchart TB
 
 **[Explore all projects and case studies →](https://reda-elferrasi.vercel.app/#work)**
 
-## How this portfolio is built
+## Portfolio technology stack
+
+![React, TypeScript, Vite, CSS, Vercel, Vitest, and Git](https://skillicons.dev/icons?i=react,ts,vite,css,vercel,vitest,git&theme=light&perline=7)
+
+**React · TypeScript · Vite · CSS · Vercel · Vitest · Git**
+
+Radix UI powers accessible dialogs, Lucide provides icons, and Vercel Web Analytics tracks visits. The interface includes project search and filters, English/French switching, responsive layouts, and reduced-motion support.
+
+### How this portfolio is built
 
 ```mermaid
 flowchart LR
