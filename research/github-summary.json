@@ -1,0 +1,201 @@
+{
+  "verifiedOn": "2026-11-04",
+  "demoEvidence": "No public deployed application links or demo videos found in repository metadata and READMEs. localhost URLs are local setup instructions, not live deployments.",
+  "deployedApplicationUrls": [],
+  "forkCount": 0,
+  "additional": [
+    {
+      "name": "AI-Agents",
+      "source": "https://github.com/redaelfer/AI-Agents#readme",
+      "purpose": "Local system supervisor and document assistant with CPU/RAM monitoring, file summaries, reminders and email-triage modules.",
+      "stack": [
+        "Python",
+        "Streamlit",
+        "Ollama",
+        "Llama 3.2",
+        "psutil",
+        "PyPDF2",
+        "python-docx"
+      ]
+    },
+    {
+      "name": "pfa-php",
+      "source": "https://github.com/redaelfer/pfa-php",
+      "evidence": "GitHub repository description; no README available.",
+      "purpose": "Academic collaboration web app with professor/student profiles, posts, messaging and friend requests.",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "CSS"
+      ]
+    },
+    {
+      "name": "ScootRent-JEE",
+      "source": "https://github.com/redaelfer/ScootRent-JEE",
+      "evidence": "GitHub repository description; no README available.",
+      "purpose": "Electric-scooter rental web app with client/admin dashboards, reservation tracking and PDF billing.",
+      "stack": [
+        "Java EE",
+        "Servlets",
+        "JSP",
+        "MySQL",
+        "iText"
+      ]
+    },
+    {
+      "name": "fb-reels-automator",
+      "source": "https://github.com/redaelfer/fb-reels-automator",
+      "evidence": "GitHub description and root manifest/content/popup file names; no README available.",
+      "purpose": "Browser-extension experiment for Reels interactions and activity data collection.",
+      "stack": [
+        "JavaScript",
+        "Chrome Extension Manifest V3"
+      ]
+    },
+    {
+      "name": "greenpip",
+      "source": "https://github.com/redaelfer/greenpip",
+      "evidence": "Source tree has cli/add2vals.py, src/calc.py, pytest tests and measurement/analyze scripts. Empty README; comparison report has zero observed runs. Treat as experiment, no performance improvement claim.",
+      "purpose": "Small calculator, test automation and execution-measurement experiment.",
+      "stack": [
+        "Python",
+        "pytest",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "name": "phalanx-ai-test",
+      "source": "https://github.com/redaelfer/phalanx-ai-test",
+      "evidence": "requirements.txt lists Flask and pytest; app.py has one dashboard route; source tree includes templates/dashboard.html, darkmode.js and test_dashboard.py. No README or broader AI platform evidence.",
+      "purpose": "Flask dashboard prototype with a dark-mode script and CI/test scaffolding.",
+      "stack": [
+        "Python",
+        "Flask",
+        "pytest",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "workspacetest",
+      "source": "https://github.com/redaelfer/workspacetest/blob/main/guide.md",
+      "evidence": "guide.md explicitly states placeholders only, no application backend, auth provider, database or token service.",
+      "purpose": "Documentation sandbox specifying a future login API contract.",
+      "stack": [
+        "Markdown"
+      ]
+    },
+    {
+      "name": "portfolio",
+      "source": "https://github.com/redaelfer/portfolio",
+      "purpose": "Existing GitHub Pages portfolio, now being modernized.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
+  "existingPortfolioUrl": "https://redaelfer.github.io/portfolio/",
+  "archivedCount": 0,
+  "account": "redaelfer",
+  "featured": [
+    {
+      "name": "JobOS",
+      "source": "https://github.com/redaelfer/JobOS#readme",
+      "evidence": "README confirms manual searches, Chrome capture, multi-provider AI settings, board/list applications, PDF/DOCX/TXT ingestion, template-preserving LaTeX tailoring, isolated tests. No messages or applications sent automatically.",
+      "purpose": "Local job-search and application workspace with opportunity discovery, explained CV fit estimates and LaTeX/email draft tailoring.",
+      "stack": [
+        "Node.js 24",
+        "SQLite",
+        "JavaScript",
+        "Chrome MV3",
+        "Ollama",
+        "AI provider integrations"
+      ]
+    },
+    {
+      "name": "TalentAI",
+      "source": "https://github.com/redaelfer/TalentAI#readme",
+      "evidence": "Repository description identifies Spring AI/Ollama/Llama3, scoring, extraction and interview questions; README confirms matching, dashboards, backend/frontend, CI/CD and monitoring. Do not describe BERT as verified.",
+      "purpose": "AI-assisted recruitment workflow with candidate/HR dashboards, matching, application tracking, notifications and roles.",
+      "stack": [
+        "React",
+        "Spring Boot 3",
+        "Spring AI",
+        "Ollama/Llama3",
+        "PostgreSQL",
+        "Jenkins",
+        "Docker",
+        "Kubernetes",
+        "Prometheus",
+        "Grafana"
+      ]
+    },
+    {
+      "name": "RetinaScan",
+      "source": "https://github.com/redaelfer/RetinaScan#readme",
+      "evidence": "README describes three services, doctor/admin roles, image upload, analysis storage and training scripts. No verified sensitivity or accuracy metrics. Trained model is required for local use. Only non-starter image is retinascan-ai/training_plot.png.",
+      "purpose": "Retinal imaging research application combining image analysis with doctor/admin access, analysis history and statistics.",
+      "stack": [
+        "React",
+        "Vite",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "Flask",
+        "TensorFlow/Keras",
+        "Docker Compose"
+      ]
+    },
+    {
+      "name": "NosqlAPT",
+      "source": "https://github.com/redaelfer/NosqlAPT#readme",
+      "evidence": "README confirms unsupervised autoencoder, supervised XGBoost, serialized preprocessing pipeline, Logstash ingestion and detection logs. Do not invent benchmark scores or attack counts.",
+      "purpose": "Hybrid anomaly and APT-stage detection from preprocessed system logs.",
+      "stack": [
+        "Python",
+        "TensorFlow/Keras",
+        "Autoencoder",
+        "XGBoost",
+        "scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Logstash",
+        "Docker Compose"
+      ]
+    },
+    {
+      "name": "AgentFleet",
+      "source": "https://github.com/redaelfer/AgentFleet#readme",
+      "evidence": "README documents Docker Engine integration, agent provisioning, active counts and event logs. GitHub repo differs from older portfolio Hetzner/Tailscale wording; use current repo wording unless owner confirms other version.",
+      "purpose": "Dashboard to deploy and monitor isolated containerized AI developer agents.",
+      "stack": [
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Dockerode",
+        "PostgreSQL",
+        "Redis",
+        "Docker Compose"
+      ]
+    },
+    {
+      "name": "BigData",
+      "source": "https://github.com/redaelfer/BigData#readme",
+      "evidence": "README documents six service containers and end-to-end generator/ingestion/processing/storage flow. No measured throughput or latency provided.",
+      "purpose": "Simulated sensor-data producer feeding Kafka, streaming transformations in Spark, and distributed persistence in HDFS.",
+      "stack": [
+        "Python",
+        "PySpark",
+        "Kafka",
+        "Zookeeper",
+        "Spark Streaming",
+        "Hadoop HDFS",
+        "Docker Compose"
+      ]
+    }
+  ],
+  "publicRepositoryCount": 14
+}

@@ -1,0 +1,145 @@
+{
+  "updatedAt": "2026-11-04T13:58:55.941Z",
+  "repositories": [
+    {
+      "name": "JobOS",
+      "url": "https://github.com/redaelfer/JobOS",
+      "description": "JobOS helps junior software engineers discover recent LinkedIn and company job offers, track applications, find public recruitment contacts, and tailor CVs and email drafts using Ollama or API models.",
+      "language": "JavaScript",
+      "updatedAt": "2026-11-03T16:56:31Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "workspacetest",
+      "url": "https://github.com/redaelfer/workspacetest",
+      "description": null,
+      "language": null,
+      "updatedAt": "2026-10-02T14:19:50Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "BigData",
+      "url": "https://github.com/redaelfer/BigData",
+      "description": "A real-time data engineering pipeline. It features a Python-based producer for sensor data simulation, Spark Structured Streaming for live processing, and automated ingestion into HDFS/Hadoop for persistent Big Data storage. Fully containerized with Docker.",
+      "language": "Python",
+      "updatedAt": "2026-09-12T14:55:00Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "phalanx-ai-test",
+      "url": "https://github.com/redaelfer/phalanx-ai-test",
+      "description": null,
+      "language": "Python",
+      "updatedAt": "2026-07-15T11:32:51Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "portfolio",
+      "url": "https://github.com/redaelfer/portfolio",
+      "description": "My Portfolio",
+      "language": "HTML",
+      "updatedAt": "2026-02-24T14:32:32Z",
+      "fork": false,
+      "archived": false,
+      "homepage": "https://redaelfer.github.io/portfolio/"
+    },
+    {
+      "name": "RetinaScan",
+      "url": "https://github.com/redaelfer/RetinaScan",
+      "description": "A deep learning-powered medical imaging platform for detecting ocular diseases from retinal scans. Features a CNN-based classification engine (TensorFlow/Keras), a Spring Boot backend for secure medical record management, and a Vite/React dashboard for clinical analysis and statistics.",
+      "language": "JavaScript",
+      "updatedAt": "2026-02-11T21:39:25Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "TalentAI",
+      "url": "https://github.com/redaelfer/TalentAI",
+      "description": "AI-Powered Recruitment Platform : A Full-stack application utilizing Spring AI (Ollama/Llama3) for automated CV scoring, data extraction, and interview question generation. Features a React frontend, PostgreSQL database, and a robust DevOps pipeline with Jenkins, SonarQube, and Kubernetes.",
+      "language": "JavaScript",
+      "updatedAt": "2026-02-11T21:21:31Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "NosqlAPT",
+      "url": "https://github.com/redaelfer/NosqlAPT",
+      "description": "An advanced multi-stage threat detection system for Advanced Persistent Threats (APT). Utilizes a hybrid Deep Learning (Autoencoder) and Machine Learning (XGBoost) architecture to identify anomalies and malicious stages in network and system logs. Features a containerized ELK Stack integration for real-time monitoring.",
+      "language": "Python",
+      "updatedAt": "2026-02-11T21:17:31Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "AI-Agents",
+      "url": "https://github.com/redaelfer/AI-Agents",
+      "description": "Local OS Supervisor Agent powered by Ollama (Llama 3.2). Features intelligent document analysis (PDF, Docx, Python), real-time system monitoring, and automated email triage through a Streamlit interface.",
+      "language": "Python",
+      "updatedAt": "2026-02-11T21:15:30Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "AgentFleet",
+      "url": "https://github.com/redaelfer/AgentFleet",
+      "description": "A full-stack orchestration platform built with Next.js, TypeScript, and Docker to deploy, monitor, and manage a fleet of autonomous AI developer agents. Features real-time container status tracking via Dockerode, a centralized command dashboard, and isolated execution environments.",
+      "language": "TypeScript",
+      "updatedAt": "2026-02-09T17:53:31Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "pfa-php",
+      "url": "https://github.com/redaelfer/pfa-php",
+      "description": "A dynamic web application designed for academic collaboration between students and professors. Features include real-time messaging, post sharing, friend request management, and role-based profiles (Professor/Student). Built with PHP, MySQL, and CSS3.",
+      "language": "PHP",
+      "updatedAt": "2026-01-26T23:35:33Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "ScootRent-JEE",
+      "url": "https://github.com/redaelfer/ScootRent-JEE",
+      "description": "A robust, multi-role web application for electric scooter rentals. Built with Java EE (Servlets/JSP) and MySQL, it features real-time reservation tracking, automated PDF billing with iText, and a dynamic dashboard for both clients and administrators.",
+      "language": "Java",
+      "updatedAt": "2026-01-26T23:33:28Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "fb-reels-automator",
+      "url": "https://github.com/redaelfer/fb-reels-automator",
+      "description": "A lightweight Chrome Extension (Manifest V3) designed to automate interactions with Facebook Reels while building a structured dataset for activity analysis.",
+      "language": "JavaScript",
+      "updatedAt": "2026-01-26T20:17:35Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    },
+    {
+      "name": "greenpip",
+      "url": "https://github.com/redaelfer/greenpip",
+      "description": null,
+      "language": "Python",
+      "updatedAt": "2025-10-02T23:46:17Z",
+      "fork": false,
+      "archived": false,
+      "homepage": null
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "fetchedAt": "2026-11-04T13:19:22.1388770Z",
+  "source": "https://api.github.com/users/redaelfer/repos?per_page=100&sort=updated",
+  "repositories": [
+    {
+      "name": "JobOS",
+      "url": "https://github.com/redaelfer/JobOS",
+      "description": "JobOS helps junior software engineers discover recent LinkedIn and company job offers, track applications, find public recruitment contacts, and tailor CVs and email drafts using Ollama or API models.",
+      "homepage": "",
+      "primaryLanguage": "JavaScript",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-11-03T16:56:31Z",
+      "readmeUrl": "https://github.com/redaelfer/JobOS/blob/master/README.md",
+      "readme": "# JobOS\n\nA local, single-user job-search workspace. Built with Node.js 24, SQLite, and a lightweight browser interface. Records are stored on this computer. Choose Codex, Gemini, Kimi, local Ollama or an OpenAI-compatible server in **AI models**. Ranking and tailoring send CV/job text to that chosen model; Ollama uses the local server. Public search queries use preferences and company names, never CV text. See [AI-MODELS.md](AI-MODELS.md) for provider keys, local downloads and setup.\n\nFor generation without hosted AI quotas, download Qwen3 in **AI models**, then choose **Use local model + free search**. This uses local Ollama and public LinkedIn/web sources without an API key. Computer resources and website access still limit it. [LOCAL-SETUP.md](LOCAL-SETUP.md) includes automatic setup, restart/resume steps and a manual fallback.\n\nThe primary workflow is junior software job discovery → published HR contacts → a CV and email for each opportunity. See [JOBOS.md](JOBOS.md) for the product goal and usage guide. Applications opens in list view with a direct posting link and tailoring action in every row. Applications defaults to all saved offers; Daily opportunities defaults to the recent publication window. Both sort latest published first; missing source dates appear last. Recently detected and Best CV fit are optional sort orders.\n\n## Start using it\n\n1. Start the server and open the local URL below.\n2. Install and pair the Chrome extension using Settings, then capture real job offers with full descriptions.\n3. Open **AI models**, select a provider/model, supply its key if required, then **Save AI settings** and **Test saved model**. For local operation, use **Install / download local model** to install Ollama with Qwen3 4B. Fresh searches with alternative providers also need a configured live search service; check it separately with **Test live search**. On a quota error, use the linked quota page or explicitly configure another search service with its own key. **Reload saved settings** refreshes an outdated form.\n4. Open **CV & AI ranking** and upload your PDF, DOCX, or TXT CV (up to 2 MB). Review the extracted text. If you chose Codex, sign in with `codex login` when needed.\n5. Select up to 10 jobs, optionally enable public recruiting-email research, then click **Send to [selected provider] & rank**.\n6. Read the ranked results, strengths, gaps, suggested next steps, and source-linked contact emails. Scores are fit estimates, not hiring probabilities. No email is sent and no job application is submitted.\n\n## Search now, contacts and tailored applications\n\nIn Applications, **Search now** starts the full job-search workflow immediately using the provider saved in AI models. It uses your current saved CV, domains and posting window; the hourly schedule is disabled. Searches run only when you ask or click the button. Recent offers use source-confirmed publication dates within the last 30 days by default. With **Broader coverage** enabled, a second pass checks readable older or undated roles and retains them with availability warnings. One AI workflow or local-model download runs at a time. Detected email/profile contacts appear on board cards, in the list and in each opportunity's details, with source evidence in the details.\n\nThere is one **Search now** button: it searches LinkedIn/company career pages and then Indeed, sequentially in the same workflow. It is available in Applications, Daily opportunities and Search history & employers. **Job search** saves your edited preferences and starts the same combined scan. Combined results are deduplicated before contacts and CV comparisons run once; if one source fails, the other source's results survive with a warning. Indeed regional/tracking URLs are deduplicated by posting key, including deleted records. No Indeed account or app installation is needed. The selected public/search-API source must return readable postings; blocked pages or verification challenges are skipped with coverage warnings. Search APIs have their own quotas and cannot guarantee that Indeed descriptions are accessible. The Chrome capture extension still targets LinkedIn. See [JOBOS.md](JOBOS.md#one-search-for-linkedin-and-indeed).\n\nChoose **Tailor CV & email** on a job card or open **CV & email tailoring**. Upload/paste a standalone main.tex or edit the project-root main.tex in VS Code and click Reload saved main.tex. Create from saved CV makes a starter from your uploaded CV text. Master saves keep backups under data/applications/master-backups and refuse to overwrite a file changed on disk since loading it. The private master is excluded from Git.\n\nSelect an opportunity with a full description, choose English/French, and review the recipient name/email. Tailor CV & write email uses your selected model. The model returns plain text replacements for existing positions; the app applies them to your original source. The preamble, packages, colors, margins, fonts, spacing, section order, commands, links and table/bullet structure stay intact. It produces a separate main.tex, outreach.txt and review.txt under data/applications/<draft-id>. Review the claims, questions and rendered layout: changing text can change line wrapping. The master is preserved. Email drafts remain editable and unsent.\n\n**Analyze offer first** previews the key requirements, source quotes, CV evidence, gaps and separate priorities for the CV and email. It creates no application files. **Tailor CV & write email** uses a current selected analysis, or analyzes first automatically; changed CV/job/language/model inputs refresh it. A requirement without confirmed master-CV evidence is flagged for clarification rather than added as a qualification. The analysis uses the saved full job description, not a new web search, and remains an AI interpretation to review.\n\nLocal Ollama requests up to eight concise edits to selected descriptive text and a short email, using the complete CV and job inputs with repeated template context removed. Text containing numeric facts, credential/status references or contact details stays intact, and replacements cannot introduce new digits. The app explicitly reports when the CV is kept unchanged; the analysis and email can still be offer-specific. New failures identify connection, context, unfinished output or invalid edits without displaying private provider content. Keep the local server running and wait for the current workflow to finish before retrying. Earlier generic failure messages remain in draft history.\n\nWhen a LaTeX compiler is available, main.pdf is built and offered for download. Windows MiKTeX under LOCALAPPDATA is detected automatically; TEX_BIN can specify an executable. PDF builds run without shell execution or automatic package installation. Unavailable/failed builds retain the .tex and email and show the limitation. Standalone source cannot include external files/images or executable TeX commands; ordinary distribution packages must already be installed. Codex's built-in LaTeX editor can also open the .tex for preview.\n\nSave reviewed draft regenerates files/PDF and confirms you checked the draft against the current master, CV text and job. Copy email or Open in mail app uses your edited subject/body. Attach the reviewed CV/PDF yourself; JobOS never sends the email. Update CV & AI ranking separately when changing the experience used for job scoring.\n\n## Your daily opportunities\n\nUpload and review your CV once in **CV & AI ranking**, then save your domains, location, experience level and exclusions in **Job search**. These preferences persist locally and are read for each requested search. **Posted within** supports the last 24 hours, 7 days, 14 days or 30 days as the primary recent window; no result-count quota is imposed. **Broader coverage** is enabled by default and adds a separate pass for older or undated postings requiring availability review. Open **Daily opportunities** for each job's score, required technologies, evidence of fit, gaps, and contact options on one card. Filter today, the last seven days or all saved jobs, and search by company, role or technology. Dates use Africa/Casablanca.\n\nStrong matches default to 70/100; change the threshold on the daily page. The selected model estimates fit using demonstrated skills (50%), relevant experience (30%) and requirements (20%). Explicit location, level and exclusion conflicts reduce suitability. Scores are explained estimates, not hiring probabilities. CV, preference or job-detail changes mark scores for refresh. Missing descriptions stay pending rather than receiving invented scores. Job cards use all stored score history. Changing providers applies to future requested workflows, without automatically reranking historical results.\n\nContact research checks published recruitment emails, then public HR names/profiles when no email is available, with confirmed employer career pages as a fallback. General business contacts are labeled with an unconfirmed HR role; unrelated merchandise/support/marketing addresses are omitted from the daily feed. Unknown people and addresses remain unknown. Clicking an email opens your mail application; JobOS does not send messages.\n\nA requested scan accepts all qualifying jobs it finds, without a 5/15/20-result cap. It researches employers in batches of six and ranks readable jobs in batches of up to ten within the selected model's input budget, processing every batch in the same scan. Hosted providers use a 120,000-character budget; Ollama uses a smaller budget based on the saved context setting and rejects oversized input instead of truncating the CV. Failed batches or unreadable descriptions remain explicitly pending. Source refresh currently checks up to three incomplete saved postings; it does not limit newly discovered results. Searches favor new URLs and include readable structured employer job-detail pages alongside public LinkedIn postings. Research also covers previously saved employers, with seven-day cache for a recruitment route and one-day retry for general-only or empty results. Older research is refreshed to apply current checks.\n\nThis is manual discovery. Time and source access limit coverage; it is not an exhaustive index or a real-time subscription. Hidden/unreadable descriptions may still need Chrome capture or pasted text. LinkedIn's authenticated Chrome session is not used by the search.\n\n## Manual search and history\n\nThe prior hourly schedule is disabled. Ask Codex to search or click **Search now** when you want new results. Save professional domains and the **Posted within** window in **Job search**. Default targets cover junior software, backend, frontend, full-stack, AI, data, DevOps and QA in Morocco and eligible remote roles.\n\n**Search history & employers** shows requested workflow progress, source-confirmed recent opportunities, required technologies, company industries/websites and recruiting contacts. New jobs go into Applications, CV comparisons into CV & Codex ranking, and public contacts into People. All previously saved offers remain in Applications. Daily opportunities defaults to recent publication dates; use the visible **Also worth checking** buttons for older and undated roles, or **Publication → All saved** for the full history. These records are not guaranteed to remain open. A readable page, Apply button or future application deadline alone is not proof of active hiring.\n\nNo timer launches job searches. The saved Codex task is paused, and the old hourly launcher exits without searching. The manual workflow can start JobOS if necessary and uses the saved AI provider. Codex uses its existing CLI sign-in; alternative providers use their own API keys or local server and never silently fall back to Codex. Hosted generation/search services have their own usage limits. Source access and runtime limits still prevent guaranteed exhaustive coverage.\n\nTo run one scan manually:\n\n```powershell\ncd \"C:\\Users\\ROG\\Pictures\\ensias\\project\\JOB\"\nnode scripts/run-search.js\n```\n\nSearches use public LinkedIn, Indeed and readable employer postings through web search, not the authenticated Chrome session. Public descriptions are extracted directly when accessible; unavailable descriptions require Chrome capture or pasted text before ranking. Recruiting names and roles require accessible source evidence; published business emails are never guessed and deliverability is unverified. Company industry/website research is labeled for review. No outreach is sent.\n\nAfter extension updates, open `chrome://extensions` and click **Reload** on JobOS, refresh the LinkedIn job page, then capture again. Version 0.2.0 supports semantic headings in newer layouts, skips global notification headings, retries during loading, and shows missing-field messages above the form.\n\nCodex integration uses a separate official CLI run, not an API into the current chat. For endpoint details and data handling, see [API.md](API.md). Run JobOS from a normal signed-in terminal so the process can access Codex authentication.\n\n## Start\n\n```powershell\nnpm ci\nnpm start\n```\n\nOpen http://127.0.0.1:4317. Node.js 24 or newer is required. The server listens only on the loopback interface. Keep it running while using the app or extension. To stop it, press Ctrl+C in its terminal. SQLite's experimental warning on Node 24 is expected.\n\n## What works\n\n- Applications: create, edit, search, filter, delete, and move through Saved → Applied → Screening → Interview → Offer → Closed. Board and list views share the same records.\n- Job details: company, location, compensation, posting URL, description, and notes.\n- Contacts: recruiter, hiring-manager, referral, and other contact information and notes.\n- Follow-ups: dated reminders linked to jobs, overdue indicators, completion and reopening.\n- Discovery: user-triggered Chrome capture, LinkedIn alert-email imports, optional automatic IMAP checks, URL deduplication, and keyword/location/exclusion preferences.\n- Career studio: a local keyword comparison and editable outreach templates. These are **not AI outputs**.\n- CV & AI ranking: PDF/DOCX/TXT upload, explained AI rankings, and optional public recruiting-email research with independently checked source pages. No LetsMCP service is required.\n- AI models: saved provider/model profiles, private API keys, connection tests/catalogs, live search selection, and explicit portable Ollama/model downloads with progress.\n- Settings: pairing token, profile, optional browser notifications, and JSON export.\n\nThe initial workspace is intentionally empty. No fabricated opportunities or job-search statistics are seeded.\n\n## Chrome extension\n\n1. Open Chrome's extension manager (`chrome://extensions`).\n2. Enable Developer mode, click **Load unpacked**, and select this project's `extension` folder.\n3. In JobOS → Settings, copy the pairing token.\n4. Open the extension's **Connection settings**, leave the address as `http://127.0.0.1:4317`, paste the token, and save the connection.\n5. Open a specific LinkedIn job, then click the extension. Review/correct the captured fields and click **Save opportunity**.\n\nThe extension runs only when you invoke it. It supports job detail pages and selected jobs in LinkedIn search, with structured JobPosting metadata as a fallback. Missing fields remain editable. LinkedIn changes its markup, so extraction is best-effort. Chrome installation and a live authenticated LinkedIn capture still need a user-side smoke test.\n\nLinkedIn prohibits third-party extensions that scrape its pages; using extraction on LinkedIn carries account-policy risk. See https://www.linkedin.com/help/linkedin/answer/a1341387/prohibited-software-and-extensions. The email workflow does not automate LinkedIn browsing.\n\n## New-offer detection from LinkedIn alerts\n\n1. In **Discover & alerts**, save your preferences and open LinkedIn search.\n2. On LinkedIn, create a job alert and enable email delivery.\n3. Either download an alert email as `.eml` and import it, or configure automatic mailbox checking below.\n\nEmail imports extract **direct LinkedIn job URLs and linked titles**. They do not invent company, location, or description details that cannot be reliably attributed to a specific job. Those fields may require editing. Capturing the same job with the extension enriches the imported record while preserving its stage and notes. Plain pasted URLs produce an opportunity that needs review. Tracking-only redirect links without a job ID are not followed; capture those jobs manually instead.\n\nMatching uses case-insensitive substring rules: any keyword AND any location AND no excluded term. Empty filters are unrestricted. Filters apply when a job is created or edited; changing preferences alone does not rewrite historical alerts. Email jobs with no location will not pass a location filter, so leave it blank for email-title matching and narrow your search on LinkedIn itself. All imported jobs remain in Applications even if they do not match. No matching score or ranking is inferred from an email containing several jobs.\n\n### Optional automatic mailbox checks\n\nCopy `.env.example` to `.env`, enter your mailbox's IMAP configuration, and restart the server:\n\n```dotenv\nIMAP_HOST=imap.your-provider.com\nIMAP_PORT=993\nIMAP_USER=you@example.com\nIMAP_PASSWORD=your-app-password\nIMAP_FOLDER=INBOX\n```\n\nUse a provider-supported app password. Providers requiring OAuth-only authentication are not supported yet. Secrets belong in `.env`, never in source control or chat. IMAP uses TLS and opens the folder read-only; it does not mark messages read or send email.\n\nThe server checks at startup and every five minutes. It scans at most the latest 100 messages from a LinkedIn sender within the last seven days, skips messages larger than 1 MB, and deduplicates opportunities by canonical URL. Sender filtering is a convenience, not authentication of an email. No links in messages are fetched. Errors are shown in the workspace. The computer and Node process must stay on; this is not an always-on hosted service.\n\n### Notifications\n\nThe workspace shows matching alerts and overdue follow-ups. Optional browser notifications run every 30 seconds **while a JobOS page is open** and permission is granted. Each reminder/match notifies once per browser profile. They are not OS-scheduled alarms and will not fire after the app is closed. Mailbox ingestion can continue with the page closed if the server stays running.\n\n## Data and security boundaries\n\n- SQLite database: `data/jobos.sqlite` (created on first start). Settings and pairing identity persist across restarts.\n- App-entered AI keys: ignored `data/ai-credentials.json`, separate from SQLite and never included in exports. These keys are not encrypted. Local portable model files are stored under ignored `data/ollama/`.\n- Back up the database after stopping the server, or use **Export workspace** for JSON. JSON export is an archive; an in-app restore workflow is not included.\n- The local database is not encrypted. Protect it with your device account and disk encryption as appropriate.\n- The extension stores its pairing token in Chrome's local extension storage. Tokens are excluded from JSON exports.\n- The server checks Host and Origin, serves only an explicit static-file allowlist, and limits extension requests to the token-protected capture route.\n- Designed for one trusted local user. Do not expose this server publicly; it has no multi-user authentication.\n\n## Development and checks\n\n```powershell\nnpm run dev\nnpm run check\nnpm test\nnpm audit --omit=dev\n```\n\nTests use isolated databases and synthetic email/LinkedIn fixtures. See `TESTING.md` for verification coverage and remaining live-integration checks.\n\nFiles: `server.js` (HTTP API), `lib/` (database, matching, MIME/IMAP), `public/` (interface), `extension/` (Chrome MV3), `test/` (automated tests).\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [
+        "README.md",
+        "package.json"
+      ],
+      "rootFiles": [
+        ".env.example",
+        ".gitignore",
+        "AGENTS.md",
+        "AI-MODELS.md",
+        "API.md",
+        "JOBOS.md",
+        "LOCAL-SETUP.md",
+        "README.md",
+        "TESTING.md",
+        "package-lock.json",
+        "package.json",
+        "server.js"
+      ]
+    },
+    {
+      "name": "workspacetest",
+      "url": "https://github.com/redaelfer/workspacetest",
+      "description": null,
+      "homepage": null,
+      "primaryLanguage": null,
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "main",
+      "updatedAt": "2026-10-02T14:19:50Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [],
+      "rootFiles": [
+        "guide.md",
+        "workspace.md"
+      ]
+    },
+    {
+      "name": "BigData",
+      "url": "https://github.com/redaelfer/BigData",
+      "description": "A real-time data engineering pipeline. It features a Python-based producer for sensor data simulation, Spark Structured Streaming for live processing, and automated ingestion into HDFS/Hadoop for persistent Big Data storage. Fully containerized with Docker.",
+      "homepage": "",
+      "primaryLanguage": "Python",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-09-12T14:55:00Z",
+      "readmeUrl": "https://github.com/redaelfer/BigData/blob/master/README.md",
+      "readme": "# Big Data Pipeline: Kafka to HDFS via Spark Streaming\n\nThis project implements a complete Big Data architecture allowing for data generation simulation, real-time ingestion via **Kafka**, processing with **Spark Streaming**, and finally, persistent storage in **HDFS**.\n\n## 🏗️ System Architecture\n\nThe pipeline consists of the following layers:\n\n* **Generator (Producer)**: A Python script that simulates sending data to Kafka.\n* **Ingestion (Kafka)**: Manages real-time data streams via a broker and Zookeeper.\n* **Processing (Spark)**: A Spark Streaming processor that consumes and processes Kafka messages.\n* **Storage (HDFS)**: A Hadoop cluster (Namenode + Datanode) for distributed storage of the final data.\n\n## 🛠️ Technologies Used\n\n* **Apache Kafka & Zookeeper**: Ingestion and messaging.\n* **Apache Spark**: Stream processing (PySpark).\n* **Hadoop HDFS**: Distributed file system.\n* **Docker & Docker Compose**: Containerization and orchestration.\n\n## 🚀 Installation and Launch\n\nThanks to Docker Compose, you can launch the entire infrastructure (6 services) with a single command:\n\n```bash\n# Launching all services (Kafka, Spark, Hadoop, Producer)\ndocker-compose up --build\n\n```\n\n### Deployed Services:\n\n* **Namenode**: Port `9870` (Hadoop Web Interface).\n* **Datanode**: Storage of data blocks.\n* **Kafka Broker**: Port `9092`.\n* **Zookeeper**: Port `2181`.\n* **Spark Master**: Spark cluster management.\n* **Producer**: Automatic Python service.\n\n## 📂 Repository Structure\n\n* `docker-compose.yml`: Orchestration of the complete infrastructure.\n* `/producer`: Contains the `Dockerfile` and `main.py` for data generation.\n* `/spark`: Contains `processor.py` for the streaming processing logic.\n\n## 📊 Data Flow\n\n1. The **Producer** service generates messages and publishes them to a Kafka topic.\n2. The **Spark Processor** reads these messages continuously from Kafka.\n3. After transformation, the data is written in a distributed manner within the **HDFS** cluster.\n\n---\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [
+        "README.md",
+        "docker-compose.yml",
+        "producer/Dockerfile",
+        "producer/requirements.txt"
+      ],
+      "rootFiles": [
+        "README.md",
+        "docker-compose.yml"
+      ]
+    },
+    {
+      "name": "phalanx-ai-test",
+      "url": "https://github.com/redaelfer/phalanx-ai-test",
+      "description": null,
+      "homepage": null,
+      "primaryLanguage": "Python",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "main",
+      "updatedAt": "2026-07-15T11:32:51Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [
+        "requirements.txt"
+      ],
+      "rootFiles": [
+        ".gitignore",
+        "app.py",
+        "ci.yaml",
+        "ocv.md",
+        "redaagent.md",
+        "requirements.txt"
+      ]
+    },
+    {
+      "name": "portfolio",
+      "url": "https://github.com/redaelfer/portfolio",
+      "description": "My Portfolio",
+      "homepage": "https://redaelfer.github.io/portfolio/",
+      "primaryLanguage": "HTML",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "main",
+      "updatedAt": "2026-02-24T14:32:32Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [
+        "assets/arrow.png",
+        "assets/checkmark.png",
+        "assets/education.png",
+        "assets/email.png",
+        "assets/experience.png",
+        "assets/github.png",
+        "assets/linkedin.png",
+        "assets/phone.jpg",
+        "assets/profilepic.jpeg",
+        "assets/project1.png"
+      ],
+      "keyFiles": [],
+      "rootFiles": [
+        "index.html",
+        "script.js",
+        "style.css"
+      ]
+    },
+    {
+      "name": "RetinaScan",
+      "url": "https://github.com/redaelfer/RetinaScan",
+      "description": "A deep learning-powered medical imaging platform for detecting ocular diseases from retinal scans. Features a CNN-based classification engine (TensorFlow/Keras), a Spring Boot backend for secure medical record management, and a Vite/React dashboard for clinical analysis and statistics.",
+      "homepage": "",
+      "primaryLanguage": "JavaScript",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-02-11T21:39:25Z",
+      "readmeUrl": "https://github.com/redaelfer/RetinaScan/blob/master/README.md",
+      "readme": "# RetinaScan - Diabetic Retinopathy Detection System 👁️\n\nRetinaScan is a comprehensive medical platform integrating artificial intelligence to assist ophthalmologists in detecting and monitoring diabetic retinopathy from fundus images.\n\n## 🏗️ Project Architecture\n\nThe project is divided into three main modules:\n\n* **Backend (Java/Spring Boot)**: Manages authentication (JWT), user management, roles (DOCTOR, ADMIN), and analysis storage.\n* **Frontend (React/Vite)**: A modern user interface featuring dashboards for doctors and global statistics.\n* **AI Engine (Python/Flask)**: A dedicated service utilizing a Deep Learning model to analyze images and provide a diagnosis.\n\n## 🛠️ Technologies Used\n\n* **Frontend**: React, Vite, Lucide-react (icons).\n* **Backend**: Spring Boot, Spring Security, JWT, Maven.\n* **AI**: Flask, TensorFlow/Keras, Pandas, NumPy.\n* **DevOps**: Docker, Docker-Compose.\n\n## 📦 Installation and Deployment\n\n### Using Docker\n\nThe project includes a `docker-compose.yaml` file to launch all services with a single command:\n\n```bash\ndocker-compose up --build\n\n```\n\n### Manual Configuration\n\n1. **Database**: Configure PostgreSQL or MySQL and update the credentials in the backend's `application.properties` file.\n2. **JWT Key**: Define your `SECRET_KEY` for token security in the Spring configuration.\n3. **AI Model**: Ensure the trained model is placed in the `retinascan-ai` folder to be loaded by Flask.\n\n## 📊 Key Features\n\n* **Secure Authentication**: Registration and login with role-based access control.\n* **Doctor Dashboard**: Interface for uploading images and consulting past analysis results.\n* **Statistics**: Data visualization of analysis results via a dedicated dashboard.\n* **AI Training**: Python scripts included to retrain the model on new datasets.\n\n## 📂 Folder Structure\n\n* `/retinascan`: Java backend source code.\n* `/frontend`: React interface source code.\n* `/retinascan-ai`: Flask API and model training scripts.\n\n---\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [
+        "frontend/public/vite.svg",
+        "frontend/src/assets/react.svg",
+        "retinascan-ai/training_plot.png"
+      ],
+      "keyFiles": [
+        "README.md",
+        "docker-compose.yaml",
+        "frontend/Dockerfile",
+        "frontend/README.md",
+        "frontend/package.json",
+        "frontend/vite.config.js",
+        "retinascan-ai/Dockerfile",
+        "retinascan-ai/requirements.txt",
+        "retinascan/Dockerfile",
+        "retinascan/pom.xml"
+      ],
+      "rootFiles": [
+        ".gitignore",
+        "README.md",
+        "docker-compose.yaml"
+      ]
+    },
+    {
+      "name": "TalentAI",
+      "url": "https://github.com/redaelfer/TalentAI",
+      "description": "AI-Powered Recruitment Platform : A Full-stack application utilizing Spring AI (Ollama/Llama3) for automated CV scoring, data extraction, and interview question generation. Features a React frontend, PostgreSQL database, and a robust DevOps pipeline with Jenkins, SonarQube, and Kubernetes.",
+      "homepage": "",
+      "primaryLanguage": "JavaScript",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-02-11T21:21:31Z",
+      "readmeUrl": "https://github.com/redaelfer/TalentAI/blob/master/README.md",
+      "readme": "# TalentAI - AI-Augmented Recruitment Platform 🚀\n\n**TalentAI** is an innovative software solution designed to transform recruitment processes. By combining the power of **Spring Boot**, **React**, and Artificial Intelligence, the platform enables intelligent matching between candidates and job offers, assessment management, and recruitment workflow tracking.\n\n## 🌟 Key Features\n\n* **Intelligent Matching (AI)**: Utilization of an AI service to evaluate the fit between candidate profiles and job requirements.\n* **Dedicated Dashboards**:\n* **HR Dashboard**: Overview of applications, job offer management, and a Kanban system for process tracking.\n* **Candidate Dashboard**: Profile management, application tracking, and access to job postings.\n\n\n* **Real-Time Notifications**: Integrated alert system for both recruiters and candidates.\n* **Advanced Security**: Secure authentication and authorization for different user roles.\n\n## 🛠️ Technical Architecture\n\nThe project is built on a modern and scalable architecture:\n\n* **Backend**: Java 17+, Spring Boot 3, Spring Data JPA.\n* **Frontend**: React.js with a responsive user interface.\n* **Database**: PostgreSQL (configured via Docker and Spring).\n* **DevOps & CI/CD**: Jenkins, Docker, Kubernetes (K8s).\n* **Monitoring**: Integrated Prometheus and Grafana for performance tracking.\n\n## Quick Start Guide\n\n### 1. Prerequisites\n\n* Docker & Docker Compose\n* Java 17 and Maven\n* Node.js & npm\n\n### 2. Launching with Docker (Full)\n\nThe simplest method to launch the entire ecosystem (App, DB, Monitoring):\n\n```bash\n# Launch main services (App + DB)\ndocker-compose up -d\n\n# Launch operations services (Jenkins, Prometheus, Grafana)\ndocker-compose -f ops-compose.yml up -d\n\n```\n\n### 3. Manual Installation\n\n**Backend (Spring Boot):**\n\n```bash\n# In the root folder\n./mvnw clean install\n./mvnw spring-boot:run\n\n```\n\n*The backend will be accessible at `http://localhost:8080`.*\n\n**Frontend (React):**\n\n```bash\ncd frontend\nnpm install\nnpm start\n\n```\n\n*The frontend will be accessible at `http://localhost:3000`.*\n\n## ☸️ Kubernetes Deployment\n\nThe project is cloud-ready with complete Kubernetes configurations:\n\n* **App Deployment**: `kubectl apply -f k8s/app-deployment.yaml`.\n* **Monitoring**: Files in `k8s/monitoring/` allow for deploying Prometheus and Grafana on your cluster.\n* **GitOps CI/CD**: Planned integration with **ArgoCD** via `k8s/argocd-app.yaml`.\n\n## 📂 Repository Structure\n\n* `/src`: Java source code for the backend.\n* `/frontend`: React application.\n* `/k8s`: Kubernetes manifests for deployment and monitoring.\n* `Jenkinsfile`: Automated CI/CD pipeline.\n\n---\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [
+        "frontend/public/logo192.png",
+        "frontend/public/logo512.png",
+        "frontend/src/logo.svg"
+      ],
+      "keyFiles": [
+        "Dockerfile",
+        "README.md",
+        "docker-compose.yml",
+        "frontend/Dockerfile",
+        "frontend/README.md",
+        "frontend/package.json",
+        "pom.xml"
+      ],
+      "rootFiles": [
+        ".gitattributes",
+        ".gitignore",
+        "Dockerfile",
+        "Dockerfile-jenkins",
+        "Jenkinsfile",
+        "README.md",
+        "docker-compose.yml",
+        "mvnw",
+        "mvnw.cmd",
+        "ops-compose.yml",
+        "pom.xml",
+        "prometheus.yml"
+      ]
+    },
+    {
+      "name": "NosqlAPT",
+      "url": "https://github.com/redaelfer/NosqlAPT",
+      "description": "An advanced multi-stage threat detection system for Advanced Persistent Threats (APT). Utilizes a hybrid Deep Learning (Autoencoder) and Machine Learning (XGBoost) architecture to identify anomalies and malicious stages in network and system logs. Features a containerized ELK Stack integration for real-time monitoring.",
+      "homepage": "",
+      "primaryLanguage": "Python",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-02-11T21:17:31Z",
+      "readmeUrl": "https://github.com/redaelfer/NosqlAPT/blob/master/README.md",
+      "readme": "# NosqlAPT - APT Detection via NoSQL Log Analysis 🛡️\n\n**NosqlAPT** is an Advanced Persistent Threat (APT) detection system designed to monitor NoSQL environments. The project uses a hybrid architecture combining machine learning (XGBoost) and deep learning (Autoencoders) to identify malicious behavior through system logs.\n\n## 🌟 Key Features\n\n* **Multi-level Log Analysis**: Processing and normalization of system logs for relevant feature extraction.\n* **Hybrid AI Detection**:\n* **Autoencoder**: Used for unsupervised anomaly detection.\n* **XGBoost**: Used for supervised classification of APT attack stages.\n\n\n* **Preprocessing Pipeline**: Automatic data cleaning and encoding via a serialized Scikit-learn pipeline.\n* **Containerized Architecture**: Simplified deployment of the ELK stack (Logstash) and detection services via Docker Compose.\n\n## 🛠️ Technologies Used\n\n* **Language**: Python 3.9.\n* **Artificial Intelligence**: TensorFlow/Keras (Autoencoders), XGBoost, Scikit-learn.\n* **Infrastructure**: Docker, Docker Compose, Logstash.\n* **Data Science**: Pandas, NumPy, Joblib.\n\n## Installation and Launch\n\n### 1. Prerequisites\n\n* Docker and Docker Compose installed.\n* Python 3.9 (for local script execution).\n\n### 2. Deployment via Docker\n\nThe project uses Docker Compose to orchestrate collection and processing services:\n\n```bash\n# Launch the stack (Logstash and associated services)\ndocker-compose up --build\n\n```\n\n### 3. Using Detection Scripts\n\nYou can test the detector using the scripts provided in the `scripts/` folder or at the root:\n\n```bash\n# Run the detection demo\npython scripts/apt_detection_demo.py\n\n# Integrate and process logs\npython process_logs.py\n\n```\n\n## 📂 Project Structure\n\n* `apt_detection_project/models/`: Contains trained models (`.h5`, `.json`) and the preprocessor (`.pkl`).\n* `apt_detection_project/src/`: Core logic for detection and data preparation.\n* `logstash/config/`: Configuration for log ingestion via Logstash.\n* `apt_detector.py`: Main script for the detection interface.\n\n## Detection Pipeline\n\n1. **Ingestion**: Logs are collected and sent to the processing pipeline.\n2. **Preprocessing**: Data is cleaned and transformed according to the expected features (`expected_features.json`).\n3. **Analysis**: The hybrid model evaluates whether the behavior corresponds to an APT attack stage.\n4. **Alerting**: Results are recorded in the detection log files.\n\n---\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [
+        "README.md",
+        "apt_detection_project/requirements.txt",
+        "docker-compose.yml"
+      ],
+      "rootFiles": [
+        "1.17",
+        "README.md",
+        "apt_detector.py",
+        "apt_stage_pipeline.pkl",
+        "docker-compose.yml",
+        "expected_features.json",
+        "final_apt_detector.py",
+        "logs.txt",
+        "process_logs.py",
+        "stage_encoder.pkl"
+      ]
+    },
+    {
+      "name": "AI-Agents",
+      "url": "https://github.com/redaelfer/AI-Agents",
+      "description": "Local OS Supervisor Agent powered by Ollama (Llama 3.2). Features intelligent document analysis (PDF, Docx, Python), real-time system monitoring, and automated email triage through a Streamlit interface.",
+      "homepage": "",
+      "primaryLanguage": "Python",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-02-11T21:15:30Z",
+      "readmeUrl": "https://github.com/redaelfer/AI-Agents/blob/master/README.md",
+      "readme": "# AI Agent \n\n**ai-agents** is a local intelligent assistant designed for system supervision and document analysis. It utilizes the **Llama 3.2** model via **Ollama** to interact with your operating system and process your files with full confidentiality.\n\n## 🌟 Features\n\n* **System Supervision**: Real-time monitoring of CPU and RAM usage.\n* **Document Analysis**: Reading, extraction, and structured summarization of files in `.txt`, `.py`, `.md`, `.pdf`, and `.docx` formats.\n* **Task Manager**: Adding and viewing reminders stored locally in a `reminders.txt` file.\n* **Email Triage**: Automatic classification and summarization module for emails.\n* **File Exploration**: Ability to list directory contents and read specific files using natural language commands.\n\n## 🛠️ Technical Architecture\n\nThe project is based on a hybrid architecture combining free-form discussion (Chatbot) and function execution (Agent):\n\n* **User Interface**: Developed with **Streamlit** for an interactive experience.\n* **AI Core**: Orchestrated via **Ollama** with \"Tool Calling\" support to execute Python scripts.\n* **Modules**:\n* `summarize.py`: Logic for document processing and email triage.\n* `monitor.py`: System monitoring functions and reminder management.\n* `app.py`: Application entry point and conversation flow management.\n\n\n\n## Installation and Launch\n\n### 1. Prerequisites\n\n* [Ollama](https://ollama.com/) installed with the `llama3.2` model.\n* Python 3.10 or higher.\n\n### 2. Dependency Installation\n\nActivate your virtual environment and install the required libraries:\n\n```bash\npip install -r requirements.txt\n\n```\n\n*Dependencies notably include `psutil`, `PyPDF2`, `python-docx`, `streamlit`, and `ollama`.*\n\n### 3. Execution\n\nLaunch the user interface with the following command:\n\n```bash\nstreamlit run app.py\n\n```\n\n## 📂 Project Structure\n\n* `app.py`: Main interface and supervisor agent logic.\n* `summarize.py`: Document analysis and messaging simulation tools.\n* `monitor.py`: System monitoring and reminder management tools.\n* `requirements.txt`: List of Python dependencies.\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [
+        "README.md",
+        "requirements.txt"
+      ],
+      "rootFiles": [
+        ".gitignore",
+        "README.md",
+        "app.py",
+        "monitor.py",
+        "requirements.txt",
+        "summarize.py"
+      ]
+    },
+    {
+      "name": "AgentFleet",
+      "url": "https://github.com/redaelfer/AgentFleet",
+      "description": "A full-stack orchestration platform built with Next.js, TypeScript, and Docker to deploy, monitor, and manage a fleet of autonomous AI developer agents. Features real-time container status tracking via Dockerode, a centralized command dashboard, and isolated execution environments.",
+      "homepage": "",
+      "primaryLanguage": "TypeScript",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-02-09T17:53:31Z",
+      "readmeUrl": "https://github.com/redaelfer/AgentFleet/blob/master/README.md",
+      "readme": "# AgentFleet: AI Developer Fleet Management\n\n### Project Description\n\n**AgentFleet** is a specialized orchestration platform designed to deploy and monitor a fleet of autonomous AI developer agents. This system provides a centralized control plane to manage containerized AI units, ensuring they operate in isolated environments. Built to handle dynamic provisioning, the platform bridges the gap between high-level AI orchestration and low-level container management, allowing for real-time monitoring of agent health and system performance.\n\n### Technologies Used\n\n* **Frontend**: Next.js 15 (App Router) with TypeScript and Tailwind CSS.\n* **UI Components**: Lucide React for iconography and Shadcn/UI for consistent interface design.\n* **Backend**: Next.js API routes integrated with the Docker Engine API via `dockerode`.\n* **Database**: PostgreSQL for persistent tracking of agent metadata and task history.\n* **Caching**: Redis for efficient real-time state management and message buffering.\n* **Infrastructure**: Docker and Docker Compose for multi-service containerization.\n\n---\n\n### 1. Build the AI Agent Blueprint\n\nThe orchestrator requires a standardized image to create new agent units. Run this command to build the base AI agent image:\n\n```bash\ndocker build -t fleet-agent-image -f Dockerfile.agent .\n\n```\n\n### 2. Launch the Infrastructure\n\nUse Docker Compose to initialize the management dashboard along with the supporting database and caching layers:\n\n```bash\ndocker compose up -d --build\n\n```\n\n### 3. Access the Command Center\n\nOnce the build is complete and the containers are running, navigate to the dashboard in your web browser:\n\n**http://localhost:3000**\n\n### 4. Deploy and Monitor Units\n\nFrom the web interface, you can manage your fleet operations:\n\n* **Deploy**: Use the \"Deploy New Agent\" button to trigger the creation of a new containerized unit.\n* **Monitor**: View the live \"Active Agents\" count, which syncs directly with the Docker socket.\n* **Logs**: Track real-time system events and deployment statuses in the integrated terminal view.\n",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [
+        "fleet-manager/public/file.svg",
+        "fleet-manager/public/globe.svg",
+        "fleet-manager/public/next.svg",
+        "fleet-manager/public/vercel.svg",
+        "fleet-manager/public/window.svg"
+      ],
+      "keyFiles": [
+        "README.md",
+        "docker-compose.yml",
+        "fleet-manager/README.md",
+        "fleet-manager/next.config.ts",
+        "fleet-manager/package.json"
+      ],
+      "rootFiles": [
+        ".gitignore",
+        "Dockerfile.agent",
+        "Dockerfile.dev",
+        "README.md",
+        "agent-entrypoint.sh",
+        "docker-compose.yml"
+      ]
+    },
+    {
+      "name": "pfa-php",
+      "url": "https://github.com/redaelfer/pfa-php",
+      "description": "A dynamic web application designed for academic collaboration between students and professors. Features include real-time messaging, post sharing, friend request management, and role-based profiles (Professor/Student). Built with PHP, MySQL, and CSS3.",
+      "homepage": "",
+      "primaryLanguage": "PHP",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "main",
+      "updatedAt": "2026-01-26T23:35:33Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [
+        "pfa/image/user_female.jpg",
+        "pfa/image/user_male.jpg",
+        "pfa/logo.png",
+        "pfa/rm378-08.jpg"
+      ],
+      "keyFiles": [],
+      "rootFiles": []
+    },
+    {
+      "name": "ScootRent-JEE",
+      "url": "https://github.com/redaelfer/ScootRent-JEE",
+      "description": "A robust, multi-role web application for electric scooter rentals. Built with Java EE (Servlets/JSP) and MySQL, it features real-time reservation tracking, automated PDF billing with iText, and a dynamic dashboard for both clients and administrators.",
+      "homepage": "",
+      "primaryLanguage": "Java",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-01-26T23:33:28Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [],
+      "rootFiles": [
+        ".classpath",
+        ".gitignore",
+        ".project"
+      ]
+    },
+    {
+      "name": "fb-reels-automator",
+      "url": "https://github.com/redaelfer/fb-reels-automator",
+      "description": "A lightweight Chrome Extension (Manifest V3) designed to automate interactions with Facebook Reels while building a structured dataset for activity analysis.",
+      "homepage": null,
+      "primaryLanguage": "JavaScript",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "master",
+      "updatedAt": "2026-01-26T20:17:35Z",
+      "readmeUrl": null,
+      "readme": null,
+      "readmeError": "Response status code does not indicate success: 404 (Not Found).",
+      "treeError": null,
+      "assetFiles": [],
+      "keyFiles": [],
+      "rootFiles": [
+        "content.js",
+        "manifest.json",
+        "popup.html",
+        "popup.js"
+      ]
+    },
+    {
+      "name": "greenpip",
+      "url": "https://github.com/redaelfer/greenpip",
+      "description": null,
+      "homepage": null,
+      "primaryLanguage": "Python",
+      "fork": false,
+      "archived": false,
+      "defaultBranch": "main",
+      "updatedAt": "2025-10-02T23:46:17Z",
+      "readmeUrl": "https://github.com/redaelfer/greenpip/blob/main/README.md",
+      "readme": "",
+      "readmeError": null,
+      "treeError": null,
+      "assetFiles": [
+        "duration_boxplot.png"
+      ],
+      "keyFiles": [
+        "README.md",
+        "requirements-dev.txt",
+        "requirements.txt"
+      ],
+      "rootFiles": [
+        "README.md",
+        "comparison.md",
+        "duration_boxplot.png",
+        "metrics.json",
+        "pytest.ini",
+        "report.xml",
+        "requirements-dev.txt",
+        "requirements.txt"
+      ]
+    }
+  ]
+}

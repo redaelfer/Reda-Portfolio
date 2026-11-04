@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+
+% Compile with pdfLaTeX. No external images or fonts are required.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=1.65cm]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+% Searchable, selectable PDF text.
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\urlstyle{same}
+\hypersetup{pdftitle={Reda El Ferrasi - DATA-SCIENCE - FR},pdfauthor={Reda El Ferrasi}}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,
+  topsep=3pt,itemsep=1.5pt,parsep=0pt,partopsep=0pt}
+
+% One line for a role, project or education entry; dates stay on the right.
+\newcommand{\entry}[2]{\noindent #1\hfill #2\par}
+\newcommand{\jobgap}{\vspace{5pt}}
+
+\begin{document}
+
+
+\begin{center}
+  {\LARGE\bfseries Reda El Ferrasi}\\[3pt]
+  {\large Data Scientist junior}\\[5pt]
+  {\small
+    \href{tel:+212607420430}{+212 607420430}
+    \enspace\textbar{}\enspace
+    \href{mailto:redaelferrasi@gmail.com}{redaelferrasi@gmail.com}
+    \enspace\textbar{}\enspace
+    \href{https://www.linkedin.com/in/reda-elferrasi/}{linkedin.com/in/reda-elferrasi}
+    \enspace\textbar{}\enspace
+    \href{https://github.com/redaelfer}{github.com/redaelfer}
+  }
+\end{center}
+\vspace{-5pt}
+
+
+\section*{PROFIL}
+Ingénieur d’État en Data Science et IoT, avec des projets de classification de journaux de sécurité et d’images médicales. Expérience en préparation de données et évaluation de modèles, complétée par un stage Data Engineer à l’ONCF.
+
+\section*{COMPÉTENCES TECHNIQUES}
+\textbf{Programmation :} Python, SQL.\par
+\textbf{Données :} Pandas, NumPy, MongoDB, PostgreSQL.\par
+\textbf{ML :} TensorFlow, ingénierie des caractéristiques, évaluation des modèles.\par
+\textbf{Outils :} Docker, Git.\par
+\textbf{Langues :} Arabe (langue maternelle), anglais (B2), français (B2).
+
+\section*{EXPÉRIENCE PROFESSIONNELLE}
+
+\entry{\textbf{Ingénieur IA} \textbar{} Matious Digital -- Projet de fin d'études (PFE)}{janv. 2026 -- sept. 2026}
+\begin{itemize}
+  \item Développé et testé une plateforme avec \textbf{20 à 40 agents IA simultanés}.
+  \item Automatisé la génération de prompts, le choix des modèles, le routage et la reprise sur erreur.
+  \item Intégré deux moteurs d'agents via WebSocket et API REST.
+  \item Déployé des agents conteneurisés sur Hetzner Cloud.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Stagiaire Data Engineer} \textbar{} ONCF}{juin 2025 -- août 2025}
+\begin{itemize}
+  \item Automatisé l'ETL SNMP/Syslog : latence réduite de \textbf{23\,\%} lors des tests.
+  \item Centralisé les données et créé des tableaux de bord avec \textbf{au moins 10 KPI}.
+  \item Réduit de \textbf{35\,\%} du délai de détection des incidents dans les tests NOC.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Stagiaire développeur Full Stack} \textbar{} S4U}{juil. 2024 -- août 2024}
+\begin{itemize}
+  \item Développé un SaaS de tickets React : temps de traitement réduit de \textbf{30\,\%} en test.
+  \item Ajouté des tests Jest avec \textbf{72\,\% de couverture} sur les fonctionnalités clés.
+\end{itemize}
+
+\section*{PROJETS}
+
+\textbf{Détection d'attaques APT} \textbar{} IA et cybersécurité \textbar{} \href{https://github.com/redaelfer/NosqlAPT}{github.com/redaelfer/NosqlAPT}\par
+\begin{itemize}
+  \item Prétraité DAPT 2020 (Kaggle) : valeurs manquantes, encodage et normalisation des variables.
+  \item Simulation : F1 \textbf{0,70 à 0,73 (+0,3)} après ajout de caractéristiques d’autoencodeur à XGBoost.
+\end{itemize}
+
+\jobgap
+\textbf{RetinaScan} \textbar{} IA médicale \textbar{} \href{https://github.com/redaelfer/RetinaScan}{github.com/redaelfer/RetinaScan}\par
+\begin{itemize}
+  \item Préparé les images « Retinal Disease Classification » (Kaggle) : normalisation et augmentation.
+  \item Simulation : exactitude \textbf{73 à 76 \% (+3 points)}, avec augmentation d’images et dropout.
+\end{itemize}
+
+\jobgap
+\textbf{BigData} \textbar{} Pipeline de données en streaming \textbar{} \href{https://github.com/redaelfer/BigData}{github.com/redaelfer/BigData}\par
+\begin{itemize}
+  \item Traité les données de prix d'un producteur Python avec Spark Structured Streaming.
+  \item Stocké les données et les points de reprise dans HDFS sous Docker.
+\end{itemize}
+
+\section*{FORMATION}
+\entry{\textbf{ENSIAS} -- Diplôme d'ingénieur d'État -- Data Science \& IoT}{2023 -- 2026}
+\vspace{3pt}
+\entry{\textbf{CPGE} -- TSI}{2021 -- 2023}
+
+\section*{CERTIFICATIONS \& CENTRES D'INTÉRÊT}
+\textbf{CS50x} \textbar{} Harvard University\par
+\vspace{3pt}
+\textbf{AWS Knowledge: Cloud Essentials} -- Badge de formation \textbar{} AWS\par
+
+\vspace{5pt}
+\textbf{Intérêts :} Reprogrammation ECU, mécanique/réparation auto-moto, modding de jeux, histoire/mythologie.
+
+\end{document}

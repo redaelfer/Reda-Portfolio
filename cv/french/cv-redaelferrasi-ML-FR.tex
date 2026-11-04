@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+
+% Compile with pdfLaTeX. No external images or fonts are required.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=1.65cm]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+% Searchable, selectable PDF text.
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\urlstyle{same}
+\hypersetup{pdftitle={Reda El Ferrasi - ML - FR},pdfauthor={Reda El Ferrasi}}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,
+  topsep=3pt,itemsep=1.5pt,parsep=0pt,partopsep=0pt}
+
+% One line for a role, project or education entry; dates stay on the right.
+\newcommand{\entry}[2]{\noindent #1\hfill #2\par}
+\newcommand{\jobgap}{\vspace{5pt}}
+
+\begin{document}
+
+
+\begin{center}
+  {\LARGE\bfseries Reda El Ferrasi}\\[3pt]
+  {\large Ingénieur Machine Learning junior}\\[5pt]
+  {\small
+    \href{tel:+212607420430}{+212 607420430}
+    \enspace\textbar{}\enspace
+    \href{mailto:redaelferrasi@gmail.com}{redaelferrasi@gmail.com}
+    \enspace\textbar{}\enspace
+    \href{https://www.linkedin.com/in/reda-elferrasi/}{\nolinkurl{linkedin.com/in/reda-elferrasi/}}
+    \enspace\textbar{}\enspace
+    \href{https://github.com/redaelfer}{\nolinkurl{github.com/redaelfer}}
+  }
+\end{center}
+\vspace{-5pt}
+
+
+\section*{PROFIL}
+Ingénieur d’État en Data Science et IoT, avec des projets de classification d’images et de journaux de sécurité. Expérience en préparation de données, apprentissage par transfert et intégration de modèles via API Flask.
+
+\section*{COMPÉTENCES TECHNIQUES}
+\textbf{Programmation :} Python.\par
+\textbf{ML :} TensorFlow/Keras, scikit-learn, \textbf{XGBoost}.\par
+\textbf{Données :} Pandas, NumPy.\par
+\textbf{Outils :} \textbf{Flask}, Docker, Git.\par
+\textbf{Langues :} Arabe (langue maternelle), anglais (B2), français (B2).
+
+\section*{EXPÉRIENCE PROFESSIONNELLE}
+
+\entry{\textbf{Ingénieur IA} \textbar{} Matious Digital -- Projet de fin d'études (PFE)}{janv. 2026 -- sept. 2026}
+\begin{itemize}
+  \item Développé et testé une plateforme avec \textbf{20 à 40 agents IA simultanés}.
+  \item Intégré \textbf{OpenClaw et Hermes Agent} via WebSocket et API REST.
+  \item Automatisé la génération de prompts, le choix des modèles, le routage et la reprise sur erreur.
+  \item Déployé des agents conteneurisés sur Hetzner Cloud.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Stagiaire Data Engineer} \textbar{} ONCF}{juin 2025 -- août 2025}
+\begin{itemize}
+  \item Automatisé l'ETL SNMP/Syslog : latence réduite de \textbf{23\,\%} lors des tests.
+  \item Centralisé les données et créé des tableaux de bord avec \textbf{plus de 10 KPI}.
+  \item Réduit de \textbf{35\,\%} le délai de détection des incidents dans les tests NOC.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Stagiaire développeur Full Stack} \textbar{} S4U}{juil. 2024 -- août 2024}
+\begin{itemize}
+  \item Développé un SaaS de tickets React : temps de traitement réduit de \textbf{30\,\%} en test.
+  \item Ajouté des tests Jest avec \textbf{72\,\% de couverture} sur les fonctionnalités clés.
+\end{itemize}
+
+\section*{PROJETS}
+
+\textbf{RetinaScan} \textbar{} IA médicale \textbar{} \href{https://github.com/redaelfer/RetinaScan}{\nolinkurl{github.com/redaelfer/RetinaScan}}\par
+\begin{itemize}
+  \item Adapté \textbf{MobileNetV2} préentraîné à la classification d'images rétiniennes, avec une base gelée.
+  \item Obtenu \textbf{environ 74\,\% d'exactitude en validation} en \textbf{10 époques}, avec augmentation d'images et un~\textbf{dropout~de~0,5}.
+  \item Sauvegardé le modèle \textbf{TensorFlow} et intégré les prédictions à l'application via une API \textbf{Flask}.
+\end{itemize}
+
+\jobgap
+\textbf{Détection d'attaques APT} \textbar{} IA et cybersécurité \textbar{} \href{https://github.com/redaelfer/NosqlAPT}{\nolinkurl{github.com/redaelfer/NosqlAPT}}\par
+\begin{itemize}
+  \item Préparé les journaux \textbf{DAPT 2020} (Kaggle) : valeurs manquantes, encodage et normalisation.
+  \item Combiné des représentations d'\textbf{autoencodeur} et \textbf{XGBoost}, avec arrêt anticipé.
+  \item Enregistré une \textbf{AUC de validation interne de 0,984} ; suivi la précision, le rappel et le F1.
+\end{itemize}
+
+\section*{FORMATION}
+\entry{\textbf{ENSIAS} -- Diplôme d'ingénieur d'État -- Data Science \& IoT}{2023 -- 2026}
+\vspace{3pt}
+\entry{\textbf{CPGE} -- TSI}{2021 -- 2023}
+
+\section*{CERTIFICATIONS \& CENTRES D'INTÉRÊT}
+\textbf{CS50x} \textbar{} Harvard University\par
+\vspace{3pt}
+\textbf{AWS Knowledge: Cloud Essentials} -- Badge de formation \textbar{} AWS\par
+
+\vspace{5pt}
+\textbf{Intérêts :} Reprogrammation ECU, mécanique/réparation auto-moto, modding de jeux, histoire/mythologie.
+
+\end{document}

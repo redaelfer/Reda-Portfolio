@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+
+% Compile with pdfLaTeX. No external images or fonts are required.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=1.65cm]{geometry}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+% Searchable, selectable PDF text.
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\urlstyle{same}
+\hypersetup{pdftitle={Reda El Ferrasi - ML - ENG},pdfauthor={Reda El Ferrasi}}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.2em,label=\textbullet,
+  topsep=3pt,itemsep=1.5pt,parsep=0pt,partopsep=0pt}
+
+% One line for a role, project or education entry; dates stay on the right.
+\newcommand{\entry}[2]{\noindent #1\hfill #2\par}
+\newcommand{\jobgap}{\vspace{5pt}}
+
+\begin{document}
+
+
+\begin{center}
+  {\LARGE\bfseries Reda El Ferrasi}\\[3pt]
+  {\large Junior Machine Learning Engineer}\\[5pt]
+  {\small
+    \href{tel:+212607420430}{+212 607420430}
+    \enspace\textbar{}\enspace
+    \href{mailto:redaelferrasi@gmail.com}{redaelferrasi@gmail.com}
+    \enspace\textbar{}\enspace
+    \href{https://www.linkedin.com/in/reda-elferrasi/}{\nolinkurl{linkedin.com/in/reda-elferrasi/}}
+    \enspace\textbar{}\enspace
+    \href{https://github.com/redaelfer}{\nolinkurl{github.com/redaelfer}}
+  }
+\end{center}
+\vspace{-5pt}
+
+
+\section*{PROFILE}
+State-qualified engineer in Data Science and IoT, with projects classifying images and security logs. Experience in data preparation, transfer learning and model integration through Flask APIs.
+
+\section*{TECHNICAL SKILLS}
+\textbf{Programming:} Python.\par
+\textbf{ML:} TensorFlow/Keras, scikit-learn, \textbf{XGBoost}.\par
+\textbf{Data:} Pandas, NumPy.\par
+\textbf{Tools:} \textbf{Flask}, Docker, Git.\par
+\textbf{Languages:} Arabic (native), English (B2), French (B2).
+
+\section*{PROFESSIONAL EXPERIENCE}
+
+\entry{\textbf{AI Engineer} \textbar{} Matious Digital -- Final-year project (PFE)}{Jan. 2026 -- Sep. 2026}
+\begin{itemize}
+  \item Developed and tested a platform with \textbf{20 to 40 concurrent AI agents}.
+  \item Integrated \textbf{OpenClaw and Hermes Agent} through WebSocket and REST APIs.
+  \item Automated prompt generation, model selection, routing and error recovery.
+  \item Deployed containerized agents on Hetzner Cloud.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Data Engineering Intern} \textbar{} ONCF}{Jun. 2025 -- Aug. 2025}
+\begin{itemize}
+  \item Automated SNMP/Syslog ETL: reduced latency by \textbf{23\,\%} during testing.
+  \item Centralized data and created dashboards with \textbf{more than 10 KPIs}.
+  \item Reduced incident detection time by \textbf{35\,\%} during NOC testing.
+\end{itemize}
+
+\jobgap
+\entry{\textbf{Full Stack Developer Intern} \textbar{} S4U}{Jul. 2024 -- Aug. 2024}
+\begin{itemize}
+  \item Developed a React ticketing SaaS: reduced processing time by \textbf{30\,\%} in tests.
+  \item Added Jest tests with \textbf{72\,\% coverage} of key features.
+\end{itemize}
+
+\section*{PROJECTS}
+
+\textbf{RetinaScan} \textbar{} Medical AI \textbar{} \href{https://github.com/redaelfer/RetinaScan}{\nolinkurl{github.com/redaelfer/RetinaScan}}\par
+\begin{itemize}
+  \item Adapted pretrained \textbf{MobileNetV2} for retinal image classification, with a frozen base.
+  \item Achieved \textbf{approximately 74\,\% validation accuracy} in \textbf{10 epochs}, with image augmentation and \textbf{dropout~of~0.5}.
+  \item Saved the \textbf{TensorFlow} model and integrated its predictions into the application through a \textbf{Flask API}.
+\end{itemize}
+
+\jobgap
+\textbf{APT Attack Detection} \textbar{} AI and Cybersecurity \textbar{} \href{https://github.com/redaelfer/NosqlAPT}{\nolinkurl{github.com/redaelfer/NosqlAPT}}\par
+\begin{itemize}
+  \item Prepared \textbf{DAPT 2020} (Kaggle) logs: missing values, encoding and normalization.
+  \item Combined \textbf{autoencoder} representations and \textbf{XGBoost}, with early stopping.
+  \item Recorded an \textbf{internal validation AUC of 0.984}; tracked precision, recall and F1.
+\end{itemize}
+
+\section*{EDUCATION}
+\entry{\textbf{ENSIAS} -- State Engineering Degree -- Data Science \& IoT}{2023 -- 2026}
+\vspace{3pt}
+\entry{\textbf{CPGE} -- TSI preparatory classes}{2021 -- 2023}
+
+\section*{CERTIFICATIONS \& INTERESTS}
+\textbf{CS50x} \textbar{} Harvard University\par
+\vspace{3pt}
+\textbf{AWS Knowledge: Cloud Essentials} -- Training badge \textbar{} AWS\par
+
+\vspace{5pt}
+\textbf{Interests:} ECU remapping, car/motorcycle mechanics and repair, game modding, history/mythology.
+
+\end{document}

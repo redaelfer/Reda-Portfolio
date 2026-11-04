@@ -1,0 +1,16 @@
+.git/
+.github/
+.npm-cache/
+node_modules/
+dist/
+.vercel/
+assets/
+cv/
+docs/
+research/
+output/
+tmp/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
