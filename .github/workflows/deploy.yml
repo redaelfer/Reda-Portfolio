@@ -10,7 +10,8 @@ permissions:
 
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  # Let the active Pages deployment finish before publishing the next build.
+  cancel-in-progress: false
 
 jobs:
   build:

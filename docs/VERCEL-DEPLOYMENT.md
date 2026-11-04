@@ -50,7 +50,7 @@ See [Vercel's Web Analytics setup guide](https://vercel.com/docs/analytics/quick
 
 ## GitHub and future updates
 
-A CLI deployment does not require a Git push. To make future pushes deploy automatically, connect this repository in the Vercel project's Git settings. The optional GitHub Pages workflow is separate and requires Pages to use GitHub Actions.
+A CLI deployment does not require a Git push. To make future pushes deploy automatically, connect this repository in the Vercel project's Git settings. The GitHub Pages mirror has a separate workflow. Its publishing source is **GitHub Actions**, and its deployments run one at a time without cancelling an active deployment. Keep Pages on that source to avoid competing branch-based builds.
 
 CV maintenance instructions: [EDITING-CVS.md](EDITING-CVS.md). Real app screenshot instructions: [SCREENSHOT-CAPTURE.md](SCREENSHOT-CAPTURE.md).
 
