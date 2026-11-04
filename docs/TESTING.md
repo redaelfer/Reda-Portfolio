@@ -18,7 +18,7 @@ The connected browser/computer-use host was unavailable in this session (`browse
 
 The project interaction tests run in jsdom. They verify DOM behavior, accessible labels and focus, but do not substitute for actual browser rendering, real-device testing or a complete accessibility audit.
 
-The GitHub Pages workflow is optional and requires Pages to be configured for GitHub Actions. Production runs on Vercel with public production access and protected previews. All 20 production files were verified over HTTPS with HTTP 200 and matching SHA-256 hashes after the final full-face crop, including all eight PDFs. The Vercel API confirms `ssoProtection.deploymentType: "preview"`.
+The `Portfolio CI` workflow runs TypeScript checks, interaction/content tests, and the production build on pushes and pull requests. It does not publish GitHub Pages. Production runs on Vercel with public production access and protected previews. All 20 production files were verified over HTTPS with HTTP 200 and matching SHA-256 hashes after the final full-face crop, including all eight PDFs. The Vercel API confirms `ssoProtection.deploymentType: "preview"`.
 
 The subsequent domain repair attached `https://reda-elferrasi.vercel.app/` as the public production address. Vercel reports `configured_correctly`, and all 20 deployed files, including all eight CV PDFs, returned HTTP 200 and matched the final local build by SHA-256. Canonical and social-sharing metadata use the new address. The unregistered `portfolio-reda.now` assignment was removed from this project; see `VERCEL-DEPLOYMENT.md`.
 
@@ -39,4 +39,4 @@ The CV builder's listing, argument validation and missing-compiler behavior are 
 5. Try project search plus each filter, an empty state, sorting, career expansion and the skill-to-project links.
 6. Start, stop, finish and replay an architecture walkthrough; switch projects mid-run. Enable reduced motion and confirm decoration stays still.
 7. Verify portrait and font loading, contact mail links, GitHub/LinkedIn links and email copying.
-8. Repeat with `npm run build` / `npm run preview` before publishing. Confirm the deployed `/portfolio/` base resolves scripts, fonts, images and CV downloads.
+8. Repeat with `npm run build` / `npm run preview` before publishing. Confirm the public Vercel address resolves scripts, fonts, images and CV downloads.

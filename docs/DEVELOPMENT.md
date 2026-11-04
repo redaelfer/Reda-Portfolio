@@ -52,4 +52,4 @@ Current project visuals are labelled architecture sketches. They do not represen
 - [Verification coverage and limits](TESTING.md)
 - [Content sources and design decisions](RESEARCH.md)
 
-The `.github/workflows/deploy.yml` workflow checks, builds, and publishes the GitHub Pages mirror. The repository's **Settings → Pages** publishing source is **GitHub Actions**; keep this setting to avoid a second branch-based publisher competing with the workflow. Deployments wait for an active Pages deployment to finish rather than cancelling it. The relative Vite base supports `/portfolio/`. Vercel remains the primary public address.
+The `.github/workflows/ci.yml` workflow runs TypeScript checks, tests, and the production build on pushes and pull requests to `main` or `master`. GitHub Actions validates the source; Vercel hosts the website. The CI workflow has read-only repository permissions and does not publish GitHub Pages.
