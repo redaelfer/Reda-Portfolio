@@ -40,6 +40,14 @@ npx --yes vercel domains verify reda-elferrasi.vercel.app --project prj_GzGBgkdj
 
 If the production address changes, update canonical, `og:url` and `og:image` metadata in `index.html`, rebuild, and deploy. Keep the CV/LinkedIn portfolio link aligned with the verified production address.
 
+## Web Analytics
+
+Vercel Web Analytics is enabled for this project. The root in `src/main.tsx` mounts the official `@vercel/analytics/react` component once alongside the app. It collects the default visitor and page-view statistics; no custom events are configured.
+
+After deploying, open the public portfolio in a browser, then return to this project's **Analytics** tab in Vercel. New visits can take a short time to appear. If the setup screen remains, check that the browser can load `/_vercel/insights/script.js` and that a content blocker is not blocking the request. Local development uses the package's development mode and does not send production page views.
+
+See [Vercel's Web Analytics setup guide](https://vercel.com/docs/analytics/quickstart). This is a React/Vite app, so the React integration applies even if the dashboard's setup dropdown currently displays Next.js.
+
 ## GitHub and future updates
 
 A CLI deployment does not require a Git push. To make future pushes deploy automatically, connect this repository in the Vercel project's Git settings. The optional GitHub Pages workflow is separate and requires Pages to use GitHub Actions.
