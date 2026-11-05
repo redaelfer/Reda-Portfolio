@@ -1,74 +1,55 @@
 # Reda El Ferrasi · Portfolio
 
-[![Reda El Ferrasi — From data to useful intelligence](public/social-card.png)](https://reda-elferrasi.vercel.app/)
+**AI Engineering · Multi-Agent Systems · Machine Learning · Data Science**
 
-<p align="center">
-  <strong>AI Engineering · Multi-Agent Systems · Machine Learning · Data Science</strong><br/>
-  Full-stack engineering to turn ideas into applications.
-</p>
-
-<p align="center">
+<p>
   <a href="https://reda-elferrasi.vercel.app/">
-    <img src="https://img.shields.io/badge/Visit_the_Portfolio-184F3B?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit the live portfolio on Vercel"/>
+    <img src="https://img.shields.io/badge/Portfolio-184F3B?style=for-the-badge&amp;logo=vercel&amp;logoColor=white" alt="Visit my portfolio"/>
   </a>
-  <a href="https://github.com/redaelfer">
-    <img src="https://img.shields.io/badge/Explore_my_GitHub-24292F?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore Reda's GitHub projects"/>
+  <a href="https://www.linkedin.com/in/reda-elferrasi/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="Connect with me on LinkedIn"/>
   </a>
 </p>
 
-Explore my projects, interactive architecture walkthroughs, experience, and English/French CVs on **[reda-elferrasi.vercel.app](https://reda-elferrasi.vercel.app/)**.
+I am a state-qualified engineer in **Data Science and IoT from ENSIAS**, based in Morocco. My focus is AI engineering, machine learning, and data science, supported by full-stack development to turn models and workflows into applications.
 
-## My expertise
+## Multi-agent systems & LLM integration
 
-I am a state-qualified engineer in Data Science and IoT from ENSIAS. My work spans multi-agent systems, LLM integration, machine learning, data engineering, and full-stack applications.
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-184F3B?style=flat-square)](https://openclaw.ai/)
+[![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-36546B?style=flat-square)](https://hermes-agent.nousresearch.com/)
 
-### Multi-agent systems & LLM integration
+In my latest work experience, I developed and tested an orchestration platform with **20–40 concurrent AI agents**.
 
-![OpenClaw](https://img.shields.io/badge/OpenClaw-184F3B?style=flat-square)
-![Hermes Agent](https://img.shields.io/badge/Hermes_Agent-36546B?style=flat-square)
-![Multi-agent orchestration](https://img.shields.io/badge/Multi--agent_orchestration-184F3B?style=flat-square)
+- Integrated **[OpenClaw](https://openclaw.ai/) and [Hermes Agent](https://hermes-agent.nousresearch.com/)** through WebSocket and REST APIs.
+- Automated prompt generation, model selection, routing, and error recovery.
+- Deployed containerized agents on **Hetzner Cloud**.
 
-During my final-year project at **Matious Digital (January–September 2026)**, I developed and tested an orchestration platform with **20–40 concurrent AI agents**.
+My other AI projects use **Spring AI, Ollama, and tool calling**. My [portfolio](https://reda-elferrasi.vercel.app/) includes project case studies, interactive architecture diagrams, and English/French CVs.
 
-- Integrated **OpenClaw and Hermes Agent** through **WebSocket and REST APIs**.
-- Automated **prompt generation, model selection, routing, and error recovery**.
-- Deployed **containerized agents on Hetzner Cloud**.
+## Engineering toolkit
 
-My LLM integration projects also use **Spring AI, Ollama, and tool calling**. These capabilities are documented in my [AI engineering CV](public/cv/cv-redaelferrasi-AI-ENG.pdf) and the project case studies below.
-
-## My engineering toolkit
-
-These technologies come from the projects and experience featured in the portfolio.
-
-| Focus                      | Technologies                                                                                                                                                                                                          |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AI & machine learning**  | ![Python, TensorFlow, scikit-learn, and Flask](https://skillicons.dev/icons?i=python,tensorflow,sklearn,flask&theme=light&perline=4)<br/>Python · TensorFlow/Keras · scikit-learn · XGBoost · Ollama · Spring AI      |
-| **Data & infrastructure**  | ![Kafka, PostgreSQL, MongoDB, and Docker](https://skillicons.dev/icons?i=kafka,postgres,mongodb,docker&theme=light&perline=4)<br/>Kafka · PySpark · HDFS · SQL · Pandas · NumPy · PostgreSQL · MongoDB · Docker       |
-| **Full-stack development** | ![Java, Spring, Next.js, and Node.js](https://skillicons.dev/icons?i=java,spring,nextjs,nodejs&theme=light&perline=4)<br/>React · Next.js · TypeScript · Java · Spring Boot · Flask · Node.js · REST APIs · WebSocket |
+| Area                       | Tools and technologies                                                                                                                                                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI & machine learning**  | ![Python, TensorFlow, scikit-learn, Flask](https://skillicons.dev/icons?i=python,tensorflow,sklearn,flask&theme=light&perline=4)<br/>Python · TensorFlow/Keras · scikit-learn · XGBoost · Ollama · Spring AI                          |
+| **Data & infrastructure**  | ![Kafka, PostgreSQL, MongoDB, Docker](https://skillicons.dev/icons?i=kafka,postgres,mongodb,docker&theme=light&perline=4)<br/>Kafka · PySpark · HDFS · SQL · Pandas · NumPy · PostgreSQL · MongoDB · Docker                           |
+| **Full-stack development** | ![React, TypeScript, Java, Spring, Next.js, Node.js](https://skillicons.dev/icons?i=react,ts,java,spring,nextjs,nodejs&theme=light&perline=6)<br/>React · Next.js · TypeScript · Java · Spring Boot · Node.js · REST APIs · WebSocket |
 
 ![AI engineering capability map: agent systems and LLMs, machine learning, data pipelines, and applications.](docs/images/engineering-map.svg)
 
 ## Selected projects
 
-| Project                                                | What it explores                               | Main technologies                                       |
-| ------------------------------------------------------ | ---------------------------------------------- | ------------------------------------------------------- |
-| [TalentAI](https://github.com/redaelfer/TalentAI)      | AI-assisted recruitment and candidate matching | React · Spring Boot · Spring AI · Ollama · PostgreSQL   |
-| [RetinaScan](https://github.com/redaelfer/RetinaScan)  | Academic retinal-image classification          | TensorFlow · MobileNetV2 · Flask · React · Spring Boot  |
-| [APT Detection](https://github.com/redaelfer/NosqlAPT) | Machine learning for security-log analysis     | Python · XGBoost · scikit-learn · TensorFlow · Logstash |
-| [BigData](https://github.com/redaelfer/BigData)        | Streaming events from ingestion to storage     | Kafka · PySpark · HDFS · Python · Docker                |
-| [AgentFleet](https://github.com/redaelfer/AgentFleet)  | A control interface for containerized agents   | Next.js · TypeScript · Dockerode · PostgreSQL · Redis   |
-| [JobOS](https://github.com/redaelfer/JobOS)            | A local workspace for job-search organization  | Node.js · SQLite · Ollama · LaTeX                       |
+| Project                                               | Focus                                                              | Main technologies                                       |
+| ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
+| [RetinaScan](https://github.com/redaelfer/RetinaScan) | Academic retinal-image classification                              | TensorFlow · MobileNetV2 · Flask · React · Spring Boot  |
+| [TalentAI](https://github.com/redaelfer/TalentAI)     | AI-assisted recruitment and candidate matching                     | Spring Boot · Spring AI · Ollama · React · PostgreSQL   |
+| [JobOS](https://github.com/redaelfer/JobOS)           | A local workspace for job discovery, tracking, and tailored drafts | Node.js · SQLite · Ollama · LaTeX                       |
+| [NosqlAPT](https://github.com/redaelfer/NosqlAPT)     | Machine learning for security-log analysis                         | Python · XGBoost · scikit-learn · TensorFlow · Logstash |
+| [BigData](https://github.com/redaelfer/BigData)       | Streaming events from ingestion to storage                         | Kafka · PySpark · HDFS · Python · Docker                |
 
-**[Explore all projects and case studies →](https://reda-elferrasi.vercel.app/#work)**
+Also exploring: [AgentFleet](https://github.com/redaelfer/AgentFleet), a Docker-backed agent-monitoring prototype, and [AI-Agents](https://github.com/redaelfer/AI-Agents), an Ollama assistant with tool calling and a Streamlit interface.
 
-## Portfolio technology stack
+## Connect
 
-![React, TypeScript, Vite, CSS, Vercel, Vitest, and Git](https://skillicons.dev/icons?i=react,ts,vite,css,vercel,vitest,git&theme=light&perline=7)
+I am interested in **AI engineering, machine learning, and data science opportunities**.
 
-**React · TypeScript · Vite · CSS · Vercel · Vitest · Git**
-
-Radix UI powers accessible dialogs, Lucide provides icons, and Vercel Web Analytics tracks visits. The interface includes project search and filters, English/French switching, responsive layouts, and reduced-motion support.
-
----
-
-[CV editing](docs/EDITING-CVS.md) · [Development notes](docs/DEVELOPMENT.md) · [Deployment](docs/VERCEL-DEPLOYMENT.md)
+[Portfolio & CVs](https://reda-elferrasi.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/reda-elferrasi/) · [All repositories](https://github.com/redaelfer?tab=repositories)
