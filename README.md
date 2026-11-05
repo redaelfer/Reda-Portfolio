@@ -46,17 +46,7 @@ These technologies come from the projects and experience featured in the portfol
 | **Data & infrastructure**  | ![Kafka, PostgreSQL, MongoDB, and Docker](https://skillicons.dev/icons?i=kafka,postgres,mongodb,docker&theme=light&perline=4)<br/>Kafka · PySpark · HDFS · SQL · Pandas · NumPy · PostgreSQL · MongoDB · Docker       |
 | **Full-stack development** | ![Java, Spring, Next.js, and Node.js](https://skillicons.dev/icons?i=java,spring,nextjs,nodejs&theme=light&perline=4)<br/>React · Next.js · TypeScript · Java · Spring Boot · Flask · Node.js · REST APIs · WebSocket |
 
-```mermaid
-flowchart LR
-    Focus["AI Engineering<br/>ML & Data Science"]
-    Focus --> Agents["Multi-agent systems & LLMs<br/>OpenClaw · Hermes Agent<br/>Ollama · Spring AI · Tool calling"]
-    Focus --> Models["Machine learning<br/>TensorFlow · scikit-learn<br/>XGBoost"]
-    Focus --> Data["Data pipelines<br/>Kafka · PySpark · HDFS<br/>SQL · Pandas · NumPy"]
-    Focus --> Apps["Applications<br/>React · Next.js · Spring Boot<br/>Flask · Node.js"]
-
-    classDef primary fill:#184f3b,color:#ffffff,stroke:#184f3b;
-    class Focus primary;
-```
+![AI engineering capability map: agent systems and LLMs, machine learning, data pipelines, and applications.](docs/images/engineering-map.svg)
 
 ## Selected projects
 
