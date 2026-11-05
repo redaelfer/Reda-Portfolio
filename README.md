@@ -24,6 +24,13 @@ In my latest work experience, I developed and tested an orchestration platform w
 - Automated prompt generation, model selection, routing, and error recovery.
 - Deployed containerized agents on **Hetzner Cloud**.
 
+### General workflow
+
+1. **Describe the work:** a task provides the starting point for the agents.
+2. **Prepare and route:** the platform generates instructions, selects a model, and assigns the work to an agent.
+3. **Execute:** connected AI agents carry out their assigned work through OpenClaw or Hermes Agent.
+4. **Handle errors:** recovery logic helps coordinate the next attempt when execution encounters a problem.
+
 My other AI projects use **Spring AI, Ollama, and tool calling**. My [portfolio](https://reda-elferrasi.vercel.app/) includes project case studies, interactive architecture diagrams, and English/French CVs.
 
 ## Engineering toolkit
