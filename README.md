@@ -69,20 +69,6 @@ These technologies come from the projects and experience featured in the portfol
 
 Radix UI powers accessible dialogs, Lucide provides icons, and Vercel Web Analytics tracks visits. The interface includes project search and filters, English/French switching, responsive layouts, and reduced-motion support.
 
-### How this portfolio is built
-
-```mermaid
-flowchart LR
-    UI["React + TypeScript<br/>Radix UI · Lucide · CSS"] --> Build["Vite<br/>Static build"]
-    Content["Project content<br/>English / French CVs"] --> Build
-    Build --> Hosting["Vercel<br/>Hosting & CDN"]
-    Hosting --> Visitor["Portfolio visitor"]
-    Visitor --> Analytics["Vercel<br/>Web Analytics"]
-
-    classDef primary fill:#184f3b,color:#ffffff,stroke:#184f3b;
-    class Hosting primary;
-```
-
 ---
 
 [CV editing](docs/EDITING-CVS.md) · [Development notes](docs/DEVELOPMENT.md) · [Deployment](docs/VERCEL-DEPLOYMENT.md)
