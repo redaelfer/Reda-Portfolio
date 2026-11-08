@@ -33,52 +33,12 @@ export const categories: { id: Category; label: Localized }[] = [
 
 export const projects: Project[] = [
   {
-    id: "TalentAI",
-    name: "TalentAI",
-    category: "ai",
-    disciplines: ["ai", "web"],
-    featured: true,
-    number: "01",
-    color: "sage",
-    label: l("AI-augmented recruitment", "Recrutement augmenté par l’IA"),
-    description: l(
-      "Connecting candidates and opportunities with LLM-powered skill extraction, matching and interview preparation.",
-      "Relier candidats et opportunités grâce à l’extraction de compétences, au matching et aux questions d’entretien par LLM.",
-    ),
-    stack: ["React", "Spring Boot", "Spring AI", "Ollama", "PostgreSQL"],
-    problem: l(
-      "Bring candidate applications, recruiter workflows and AI-assisted evaluation into one platform.",
-      "Réunir les candidatures, les processus RH et l’évaluation assistée par IA dans une plateforme.",
-    ),
-    implementation: [
-      l(
-        "Candidate and recruiter dashboards with a recruitment Kanban board.",
-        "Tableaux de bord candidat et recruteur avec Kanban de recrutement.",
-      ),
-      l(
-        "Spring AI and Ollama prompts for skill extraction, compatibility assessment and interview questions.",
-        "Prompts Spring AI et Ollama pour l’extraction de compétences, la compatibilité et les questions d’entretien.",
-      ),
-      l(
-        "PostgreSQL persistence, Docker, Jenkins, Kubernetes, Prometheus and Grafana configuration.",
-        "Persistance PostgreSQL et configuration Docker, Jenkins, Kubernetes, Prometheus et Grafana.",
-      ),
-    ],
-    evidence: l(
-      "Two JUnit/Mockito tests exercise scoring and extraction with mocked LLM responses, as documented in my latest AI CV.",
-      "Deux tests JUnit/Mockito vérifient le scoring et l’extraction avec des réponses LLM simulées, selon mon dernier CV IA.",
-    ),
-    source: "https://github.com/redaelfer/TalentAI#readme",
-    media: media("TalentAI"),
-    demoUrl: null,
-  },
-  {
     id: "RetinaScan",
     name: "RetinaScan",
     category: "ai",
     disciplines: ["ai", "data", "web"],
     featured: true,
-    number: "02",
+    number: "01",
     color: "lavender",
     label: l("Applied computer vision", "Vision par ordinateur appliquée"),
     description: l(
@@ -113,12 +73,95 @@ export const projects: Project[] = [
     demoUrl: null,
   },
   {
+    id: "TalentAI",
+    name: "TalentAI",
+    category: "ai",
+    disciplines: ["ai", "web"],
+    featured: true,
+    number: "02",
+    color: "sage",
+    label: l("AI-augmented recruitment", "Recrutement augmenté par l’IA"),
+    description: l(
+      "Connecting candidates and opportunities with LLM-powered skill extraction, matching and interview preparation.",
+      "Relier candidats et opportunités grâce à l’extraction de compétences, au matching et aux questions d’entretien par LLM.",
+    ),
+    stack: ["React", "Spring Boot", "Spring AI", "Ollama", "PostgreSQL"],
+    problem: l(
+      "Bring candidate applications, recruiter workflows and AI-assisted evaluation into one platform.",
+      "Réunir les candidatures, les processus RH et l’évaluation assistée par IA dans une plateforme.",
+    ),
+    implementation: [
+      l(
+        "Candidate and recruiter dashboards with a recruitment Kanban board.",
+        "Tableaux de bord candidat et recruteur avec Kanban de recrutement.",
+      ),
+      l(
+        "Spring AI and Ollama prompts for skill extraction, compatibility assessment and interview questions.",
+        "Prompts Spring AI et Ollama pour l’extraction de compétences, la compatibilité et les questions d’entretien.",
+      ),
+      l(
+        "PostgreSQL persistence, Docker, Jenkins, Kubernetes, Prometheus and Grafana configuration.",
+        "Persistance PostgreSQL et configuration Docker, Jenkins, Kubernetes, Prometheus et Grafana.",
+      ),
+    ],
+    evidence: l(
+      "Two JUnit/Mockito tests exercise scoring and extraction with mocked LLM responses, as documented in my latest AI CV.",
+      "Deux tests JUnit/Mockito vérifient le scoring et l’extraction avec des réponses LLM simulées, selon mon dernier CV IA.",
+    ),
+    source: "https://github.com/redaelfer/TalentAI#readme",
+    media: media("TalentAI"),
+    demoUrl: null,
+  },
+  {
+    id: "JobOS",
+    name: "JobOS",
+    category: "web",
+    disciplines: ["ai", "web"],
+    featured: true,
+    number: "03",
+    color: "pink",
+    label: l(
+      "A local workspace for the job search",
+      "Un espace local pour la recherche d’emploi",
+    ),
+    description: l(
+      "Job discovery, application tracking and AI-assisted CV tailoring in a local-first Node.js workspace.",
+      "Recherche d’offres, suivi des candidatures et adaptation de CV assistée par IA dans un espace Node.js local.",
+    ),
+    stack: ["Node.js", "JavaScript", "SQLite", "Ollama", "LaTeX"],
+    problem: l(
+      "Keep job offers, application stages and tailored drafts connected in one local workflow.",
+      "Relier offres, étapes de candidature et brouillons personnalisés dans un processus local unique.",
+    ),
+    implementation: [
+      l(
+        "Node.js API and browser interface with SQLite persistence.",
+        "API Node.js et interface web avec persistance SQLite.",
+      ),
+      l(
+        "Job capture extension and source-linked search with duplicate handling.",
+        "Extension de capture et recherche avec liens sources et déduplication.",
+      ),
+      l(
+        "AI ranking and controlled LaTeX CV text replacements; outreach remains a draft.",
+        "Classement IA et remplacements de texte contrôlés dans un CV LaTeX ; les messages restent des brouillons.",
+      ),
+    ],
+    evidence: l(
+      "README documents isolated tests, model providers and local setup. No live application is embedded here.",
+      "Le README documente les tests isolés, les fournisseurs de modèles et l’installation locale. Aucune application en ligne intégrée ici.",
+    ),
+    source: "https://github.com/redaelfer/JobOS#readme",
+    media: media("JobOS"),
+    demoUrl: null,
+  },
+  {
     id: "NosqlAPT",
     name: "APT Detection",
     category: "ai",
     disciplines: ["ai", "data"],
     featured: true,
-    number: "03",
+    number: "04",
     color: "peach",
     label: l(
       "Machine learning × cybersecurity",
@@ -161,7 +204,7 @@ export const projects: Project[] = [
     category: "data",
     disciplines: ["data"],
     featured: true,
-    number: "04",
+    number: "05",
     color: "blue",
     label: l(
       "From events to distributed storage",
@@ -204,84 +247,38 @@ export const projects: Project[] = [
     category: "ai",
     disciplines: ["ai", "web"],
     featured: true,
-    number: "05",
+    number: "06",
     color: "sand",
-    label: l(
-      "Containerized agent orchestration",
-      "Orchestration d’agents conteneurisés",
-    ),
+    label: l("Agent-monitoring prototype", "Prototype de supervision d’agents"),
     description: l(
-      "A control plane for deploying isolated AI agent containers, tracking health and viewing system events.",
-      "Une plateforme pour déployer des agents IA isolés, suivre leur état et consulter les événements système.",
+      "A Docker-backed monitoring prototype that lists containers and displays their names, IDs and current states in a Next.js dashboard.",
+      "Un prototype de supervision connecté à Docker qui affiche les noms, identifiants et états des conteneurs dans un tableau de bord Next.js.",
     ),
-    stack: ["Next.js", "TypeScript", "shadcn/ui", "Dockerode", "Redis"],
+    stack: ["Next.js", "TypeScript", "shadcn/ui", "Dockerode", "Docker"],
     problem: l(
-      "Manage containerized AI developer agents from one dashboard.",
-      "Gérer des agents IA de développement conteneurisés dans un tableau de bord unique.",
+      "Explore how a dashboard can monitor Docker containers used for AI developer agents.",
+      "Explorer la supervision de conteneurs Docker destinés aux agents IA de développement depuis un tableau de bord.",
     ),
     implementation: [
       l(
-        "Next.js API routes connect to the Docker Engine with Dockerode.",
-        "Les routes API Next.js communiquent avec Docker Engine via Dockerode.",
+        "A Next.js GET endpoint uses Dockerode to list existing containers through the Docker socket.",
+        "Un endpoint GET Next.js utilise Dockerode pour lister les conteneurs existants via le socket Docker.",
       ),
       l(
-        "PostgreSQL tracks metadata; Redis supports state and message buffering.",
-        "PostgreSQL conserve les métadonnées ; Redis gère l’état et les messages.",
+        "The API returns each container’s name, shortened ID and state.",
+        "L’API renvoie le nom, l’identifiant abrégé et l’état de chaque conteneur.",
       ),
       l(
-        "A TypeScript interface with shadcn/ui presents deployment, health and logs.",
-        "Une interface TypeScript avec shadcn/ui présente les déploiements, l’état et les logs.",
+        "A TypeScript dashboard with shadcn/ui refreshes the container list every three seconds.",
+        "Un tableau de bord TypeScript avec shadcn/ui actualise la liste des conteneurs toutes les trois secondes.",
       ),
     ],
     evidence: l(
-      "Architecture and local launch documented in the repository. This personal project is distinct from my Matious Digital PFE.",
-      "Architecture et lancement local documentés dans le dépôt. Ce projet personnel est distinct de mon PFE chez Matious Digital.",
+      "The public source implements container listing and status polling. Agent provisioning remains an unfinished part of this personal prototype.",
+      "Le code public implémente la liste des conteneurs et l’actualisation de leur état. Le provisionnement d’agents reste une fonctionnalité inachevée de ce prototype personnel.",
     ),
     source: "https://github.com/redaelfer/AgentFleet#readme",
     media: media("AgentFleet"),
-    demoUrl: null,
-  },
-  {
-    id: "JobOS",
-    name: "JobOS",
-    category: "web",
-    disciplines: ["ai", "web"],
-    featured: true,
-    number: "06",
-    color: "pink",
-    label: l(
-      "A local workspace for the job search",
-      "Un espace local pour la recherche d’emploi",
-    ),
-    description: l(
-      "Job discovery, application tracking and AI-assisted CV tailoring in a local-first Node.js workspace.",
-      "Recherche d’offres, suivi des candidatures et adaptation de CV assistée par IA dans un espace Node.js local.",
-    ),
-    stack: ["Node.js", "JavaScript", "SQLite", "Ollama", "LaTeX"],
-    problem: l(
-      "Keep job offers, application stages and tailored drafts connected in one local workflow.",
-      "Relier offres, étapes de candidature et brouillons personnalisés dans un processus local unique.",
-    ),
-    implementation: [
-      l(
-        "Node.js API and browser interface with SQLite persistence.",
-        "API Node.js et interface web avec persistance SQLite.",
-      ),
-      l(
-        "Job capture extension and source-linked search with duplicate handling.",
-        "Extension de capture et recherche avec liens sources et déduplication.",
-      ),
-      l(
-        "AI ranking and controlled LaTeX CV text replacements; outreach remains a draft.",
-        "Classement IA et remplacements de texte contrôlés dans un CV LaTeX ; les messages restent des brouillons.",
-      ),
-    ],
-    evidence: l(
-      "README documents isolated tests, model providers and local setup. No live application is embedded here.",
-      "Le README documente les tests isolés, les fournisseurs de modèles et l’installation locale. Aucune application en ligne intégrée ici.",
-    ),
-    source: "https://github.com/redaelfer/JobOS#readme",
-    media: media("JobOS"),
     demoUrl: null,
   },
   {

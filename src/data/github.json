@@ -94,7 +94,7 @@
     {
       "name": "AgentFleet",
       "url": "https://github.com/redaelfer/AgentFleet",
-      "description": "A full-stack orchestration platform built with Next.js, TypeScript, and Docker to deploy, monitor, and manage a fleet of autonomous AI developer agents. Features real-time container status tracking via Dockerode, a centralized command dashboard, and isolated execution environments.",
+      "description": "Docker-backed agent-monitoring prototype built with Next.js, TypeScript and Dockerode. Lists existing containers and polls their current states in a dashboard.",
       "language": "TypeScript",
       "updatedAt": "2026-02-09T17:53:31Z",
       "fork": false,

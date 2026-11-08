@@ -66,9 +66,9 @@ export function ProjectVisual({
       { icon: Database, title: "HDFS", sub: "STORE" },
     ],
     AgentFleet: [
-      { icon: GitBranch, title: "Next.js", sub: "CONTROL" },
-      { icon: Layers3, title: "Docker", sub: "ISOLATE" },
-      { icon: BrainCircuit, title: "Agents", sub: "EXECUTE" },
+      { icon: Layers3, title: "Docker", sub: "CONTAINERS" },
+      { icon: GitBranch, title: "Dockerode", sub: "LIST" },
+      { icon: Braces, title: "Next.js", sub: "MONITOR" },
     ],
     JobOS: [
       { icon: FileText, title: "Job offers", sub: "DISCOVER" },
